@@ -1,13 +1,15 @@
-import { ResourceType } from "./types";
-
-type Attributes = Record<string, string>;
+import { Attributes, ResourceType } from "./types";
 
 export class AemNode {
     name: string;
     attributes: Attributes = {};
     children: AemNode[] = [];
 
-    constructor(theName: string, theAttributes?: Attributes, resourceType?: ResourceType) {
+    constructor(
+        theName: string,
+        theAttributes?: Attributes,
+        resourceType?: ResourceType
+    ) {
         this.name = theName;
 
         if (theAttributes) {
@@ -33,7 +35,7 @@ export class AemNode {
     }
 
     xml(isRoot?: boolean): string {
-        let attributesString: string = "";
+        let attributesString = "";
 
         for (const prop in this.attributes) {
             attributesString += ` ${prop}="${this.attributes[prop]}"`
@@ -57,7 +59,7 @@ export class AemNode {
     }
 
     items(children?: AemNode[]): AemNode {
-        let items = new AemNode('items');
+        const items = new AemNode('items');
         this.addChild(items);
 
         children?.forEach(c =>

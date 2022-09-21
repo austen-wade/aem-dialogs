@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root jcr:title="Button" sling:resourceType="cq/dialog" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="nt:unstructured">
+  <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/container">
+    <items jcr:primaryType="nt:unstructured">
+      <tabs jcr:primaryType="nt:unstructured" sling:resourceType="granite/tabs">
+        <items jcr:primaryType="nt:unstructured">
+          <tab0 jcr:title="Properties" margin="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/container">
+            <items jcr:primaryType="nt:unstructured">
+              <columns margin="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/fixed_columns">
+                <items jcr:primaryType="nt:unstructured">
+                  <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/container">
+                    <items jcr:primaryType="nt:unstructured">
+                      <buttonText jcr:primaryType="nt:unstructured" sling:resourceType="granite/field/textfield" name="./buttonText" fieldLabel="Button Text" fieldDescription="This is the button" required="{Boolean}true"/>
+                      <checkbox jcr:primaryType="nt:unstructured" sling:resourceType="granite/field/checkbox" name="./checkbox" text="click this checkbox"/>
+                    </items>
+                  </column>
+                </items>
+              </columns>
+            </items>
+          </tab0>
+          <tab1 jcr:title="SEO" margin="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/container">
+            <items jcr:primaryType="nt:unstructured">
+              <columns margin="{Boolean}true" jcr:primaryType="nt:unstructured" sling:resourceType="granite/fixed_columns">
+                <items jcr:primaryType="nt:unstructured">
+                  <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/container">
+                    <items jcr:primaryType="nt:unstructured">
+                      <seoText jcr:primaryType="nt:unstructured" sling:resourceType="granite/field/textfield" name="./seoText"/>
+                    </items>
+                  </column>
+                </items>
+              </columns>
+            </items>
+          </tab1>
+        </items>
+      </tabs>
+    </items>
+  </content>
+</jcr:root>

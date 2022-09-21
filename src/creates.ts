@@ -1,4 +1,6 @@
 import { AemNode } from "./AemNode";
+import { Checkbox, CheckboxOptions } from "./fields/Checkbox";
+import { Textfield, TextfieldOptions } from "./fields/Textfield";
 import { ResourceType } from "./types";
 
 export function createTabsDialog(title: string, tabs: AemNode[]): AemNode {
@@ -21,9 +23,15 @@ export function createTabsDialog(title: string, tabs: AemNode[]): AemNode {
 
     return root;
 }
-export function createTextField(name: string): AemNode {
-    return new AemNode(name, {}, ResourceType.TEXTFIELD);
+
+export function createTextField(options: TextfieldOptions): Textfield {
+    return new Textfield(options);
 }
+
+export function createCheckboxField(options: CheckboxOptions): Checkbox {
+    return new Checkbox(options)
+}
+
 export function createTab(idx: number, title: string, fields: AemNode[]): AemNode {
     const tab = new AemNode(`tab${idx}`, { 'jcr:title': title, "margin": "{Boolean}true" }, ResourceType.CONTAINER);
     tab.items([
@@ -36,12 +44,14 @@ export function createTab(idx: number, title: string, fields: AemNode[]): AemNod
 
     return tab;
 }
+
 export function createColumns(columns: AemNode[]): AemNode {
     const columnsWrapper = new AemNode('columns', { "margin": "{Boolean}true" }, ResourceType.FIXED_COLUMNS);
     columnsWrapper.items(columns);
 
     return columnsWrapper;
 }
+
 export function createColumn(els: AemNode[]): AemNode {
     const column = new AemNode("column", {}, ResourceType.CONTAINER);
     column.items(els);

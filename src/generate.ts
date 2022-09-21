@@ -1,9 +1,13 @@
 import { AemNode } from "./AemNode";
 import { formatXml } from "./utils";
-import { writeFileSync } from "fs";
+import { existsSync, mkdirSync, writeFileSync } from "fs";
 
-export function generate(path: string, xml: AemNode) {
+export function generate(dirPath: string, xml: AemNode) {
     let output = xml.xml(true);
     output = formatXml(output);
-    writeFileSync('./output.xml', output, {});
-};
+
+    if (!existsSync(dirPath)) {
+        mkdirSync(dirPath, { recursive: true });
+    }
+    writeFileSync(`${dirPath}/.content.xml`, output, {});
+}

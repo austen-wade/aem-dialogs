@@ -1,17 +1,30 @@
-import { createTab, createTabsDialog, createTextField } from "./creates";
-import { generate } from "./generate";
+import { AemNode } from './AemNode';
+import { createCheckboxField, createTab, createTabsDialog, createTextField } from './creates';
+import { generate } from './generate';
 
-const root = createTabsDialog(
-    "Button",
-    [
-        createTab(0, "Properties", [
-            createTextField("buttonLabel"),
-            createTextField("buttonUrl"),
-        ]),
-        createTab(1, "SEO", [
-            createTextField("seoLabel"),
-        ]),
-    ]
-);
+const sharedSEOTab: AemNode = createTab(1, 'SEO', [
+    createTextField({ name: 'seoText' }),
+]);
 
-generate('./output.xml', root);
+const buttonDialog = createTabsDialog('Button', [
+    createTab(0, 'Properties', [
+        createTextField({
+            name: 'buttonText',
+            fieldLabel: 'Button Text',
+            fieldDescription: 'This is the button',
+            required: true,
+            emptyText: 'Enter button text here.',
+        }),
+        createCheckboxField({ name: 'checkbox', text: "click this checkbox", value: 'on' }),
+    ]),
+    sharedSEOTab,
+]);
+
+generate('./tests/button', buttonDialog);
+
+const titleDialog = createTabsDialog('Title', [
+    createTab(0, 'Properties', [createTextField({ name: 'titleText' })]),
+    sharedSEOTab,
+]);
+
+generate('./tests/title', titleDialog);
