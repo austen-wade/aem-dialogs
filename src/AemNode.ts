@@ -18,8 +18,10 @@ export class AemNode {
         this.tag = tag;
     }
 
-    addChild(child: AemNode) {
+    child(child: AemNode): AemNode {
         this.children.push(child);
+
+        return this;
     }
 
     addProp(field: string, value: any) {
@@ -64,10 +66,10 @@ export class AemNode {
 
     items(children?: AemNode[]): AemNode {
         const items = new AemNode("items");
-        this.addChild(items);
+        this.child(items);
 
-        children?.forEach((c) => items.addChild(c));
+        children?.forEach((c) => items.child(c));
 
-        return items;
+        return this;
     }
 }

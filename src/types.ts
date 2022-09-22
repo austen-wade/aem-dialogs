@@ -15,6 +15,7 @@ export enum ResourceType {
     SELECT = "granite/ui/components/coral/foundation/form/select",
     FIELD = "granite/ui/components/coral/foundation/form/field",
     MULTIFIELD = "granite/ui/components/coral/foundation/form/multifield",
+    RADIO_GROUP = "granite/ui/components/coral/foundation/form/radiogroup",
 }
 
 export type Prop = {
