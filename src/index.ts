@@ -1,9 +1,11 @@
 import { Container } from "./fields/Container";
+import { JcrRoot } from "./fields/JcrRoot";
 import { Multifield } from "./fields/Multifield";
 import { PathField } from "./fields/PathField";
 import { RadioGroup, RadioGroupItem } from "./fields/RadioGroup";
 import { Select } from "./fields/Select";
 import { SelectOption } from "./fields/SelectOption";
+import { DialogTabs, Tab } from "./fields/Tabs";
 import { TextField } from "./fields/TextField";
 import { generate } from "./generate";
 
@@ -28,7 +30,7 @@ const multi = new Multifield({
     fieldDescription: "Click '+' to add a new state.",
     composite: true,
 }).child(
-    new Container({ name: "field" }).items([
+    new Container({ tag: "field" }).items([
         new TextField({
             name: "name",
             fieldLabel: "Name",
@@ -46,3 +48,15 @@ const multi = new Multifield({
     ]),
 );
 generate("./tests/multi", multi);
+
+generate(
+    "./tests/dialog",
+    new JcrRoot().child(
+        new Container({ tag: "content" }).items([
+            new DialogTabs({ tag: "tabs" }).items([
+                new Tab({ tag: "tab1" }).items([multi, select]),
+                new Tab({ tag: "tab2" }).items([radioGroup]),
+            ]),
+        ]),
+    ),
+);

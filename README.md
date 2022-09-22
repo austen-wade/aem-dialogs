@@ -1,4 +1,4 @@
-# Create dialogs with Javascript
+# Create Granite/Coral UI dialogs with Javascript
 
 Project is under active development, and is not usable.
 

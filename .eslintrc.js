@@ -15,5 +15,6 @@ module.exports = {
         "prefer-const": "error",
         "@typescript-eslint/no-explicit-any": "off",
         quotes: ["error", "double"],
+        "newline-per-chained-call": ["error", { ignoreChainWithDepth: 2 }],
     },
 };
