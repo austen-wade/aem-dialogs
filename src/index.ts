@@ -6,6 +6,7 @@ import { SelectOption } from "./fields/SelectOption";
 import { TextField } from "./fields/TextField";
 import { generate } from "./generate";
 
+
 // generate("./tests/pathfield", new PathField({
 //     name: 'contentPath',
 //     rootPath: '/content/dam',

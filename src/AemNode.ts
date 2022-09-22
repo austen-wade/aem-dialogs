@@ -2,8 +2,8 @@ import { Prop } from "./types";
 import { aembool, getName } from "./utils";
 
 export interface BaseOptions {
-  tag?: string,
-  name?: string,
+    tag?: string,
+    name?: string,
 }
 
 export class AemNode {
