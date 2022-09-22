@@ -5,7 +5,11 @@ Project is under active development, and is not usable.
 ## Current working example
 
 ```typescript
-const multi = new Multifield({ name: "states", fieldDescription: "Click '+' to add a new state.", composite: true }).child(
+const multi = new Multifield({
+    name: "states",
+    fieldDescription: "Click '+' to add a new state.",
+    composite: true,
+}).child(
     new Container({ name: "field" }).items([
         new TextField({
             name: "name",
