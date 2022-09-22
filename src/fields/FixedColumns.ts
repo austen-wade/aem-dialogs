@@ -1,7 +1,7 @@
-import { AemNode } from "../AemNode";
+import { AemNode, BaseOptions } from "../AemNode";
 import { ResourceType } from "../types";
 
-export interface FixedColumnsOptions {
+export interface FixedColumnsOptions extends BaseOptions {
     name: string,
     margin?: boolean,
     maximized?: boolean,

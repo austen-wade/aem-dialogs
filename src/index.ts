@@ -77,7 +77,7 @@ field.items([
         fieldLabel: "Flag",
         fieldDescription: "Select the state flag image",
         forceSelection: true,
-        rootPath: "/content/dam"
+        rootPath: "/content/dam",
     })
 ]);
 multi.addChild(field);

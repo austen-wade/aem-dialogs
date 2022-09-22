@@ -1,7 +1,7 @@
-import { AemNode } from "../AemNode";
+import { AemNode, BaseOptions } from "../AemNode";
 import { ResourceType } from "../types";
 
-export interface FieldOptions {
+export interface FieldOptions extends BaseOptions {
     name: string,
     fieldLabel?: string,
     fieldDescription?: string,

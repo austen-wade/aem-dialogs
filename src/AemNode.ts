@@ -1,6 +1,11 @@
 import { Attributes, Prop, ResourceType } from "./types";
 import { aembool, getName } from "./utils";
 
+export interface BaseOptions {
+  tag?: string,
+  name?: string,
+}
+
 export class AemNode {
   readonly tag: string;
   props: Prop[];
@@ -18,8 +23,6 @@ export class AemNode {
   }
 
   addProp(field: string, value: any) {
-    console.log({ type: typeof value });
-
     if (typeof value !== undefined) {
       if (typeof value === "boolean") {
         value = aembool(value);

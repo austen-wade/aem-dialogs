@@ -1,7 +1,7 @@
-import { AemNode } from '../AemNode';
+import { AemNode, BaseOptions } from '../AemNode';
 import { ResourceType } from '../types';
 
-export interface DatePickerOptions {
+export interface DatePickerOptions extends BaseOptions {
     name: string;
     displayedFormat: string;
     disabled?: boolean;
