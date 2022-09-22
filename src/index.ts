@@ -24,7 +24,7 @@ const radioGroup = new RadioGroup({ name: "myradioGroup" }).items([
 generate("./tests/radiogroup", radioGroup);
 
 const multi = new Multifield({ name: "states", fieldDescription: "Click '+' to add a new state.", composite: true }).child(
-    new Container({ name: "field", "granite:class": "cmp-teaser__editor-action" }).items([
+    new Container({ name: "field" }).items([
         new TextField({
             name: "name",
             fieldLabel: "Name",
