@@ -1,48 +1,68 @@
 import { AemNode } from "./AemNode";
 import {
-  createCheckboxField,
-  createTab,
-  createTabsDialog,
-  createTextField,
+    createTab,
+    createTabsDialog,
+    createTextField,
 } from "./creates";
 import { Checkbox } from "./fields/Checkbox";
+import { PathField } from "./fields/PathField";
+import { Select } from "./fields/Select";
+import { SelectOption } from "./fields/SelectOption";
 import { generate } from "./generate";
 
-const sharedSEOTab: AemNode = createTab(1, "SEO", [
-  createTextField({ name: "seoText" }),
+// generate("./tests/pathfield", new PathField({
+//     name: 'contentPath',
+//     rootPath: '/content/dam',
+//     nodeTypes: ['dam:Asset', 'nt:file']
+// }));
+
+// const sharedSEOTab: AemNode = createTab(1, "SEO", [
+//     createTextField({ name: "seoText" }),
+// ]);
+
+// const buttonDialog = createTabsDialog("Button", [
+//     createTab(0, "Properties", [
+//         createTextField({
+//             name: "buttonText",
+//             fieldLabel: "Button Text",
+//             fieldDescription: "This is the button",
+//             required: true,
+//             emptyText: "Enter button text here.",
+//         }),
+//         new Checkbox({
+//             name: "checkbox",
+//             text: "click this checkbox",
+//             required: false,
+//         }),
+//     ]),
+//     sharedSEOTab,
+// ]);
+
+// const checkbox = new Checkbox({
+//     name: "checkbox",
+//     text: "click this checkbox",
+//     checked: false,
+// });
+
+// generate("./tests/checkbox-new", checkbox);
+
+// generate("./tests/button-new", buttonDialog);
+
+// const titleDialog = createTabsDialog("Title", [
+//     createTab(0, "Properties", [createTextField({ name: "titleText" })]),
+//     sharedSEOTab,
+// ]);
+
+// generate("./tests/title-new", titleDialog);
+
+
+const select = new Select({ name: 'myselect' });
+select.items([
+    new SelectOption({ name: 'option1', "text": "Orange", "value": "--orange" }),
+    new SelectOption({ name: 'option2', "text": "Red", "value": "--red" }),
+    new SelectOption({ name: 'option3', "text": "Green", "value": "--green" }),
 ]);
 
-const buttonDialog = createTabsDialog("Button", [
-  createTab(0, "Properties", [
-    createTextField({
-      name: "buttonText",
-      fieldLabel: "Button Text",
-      fieldDescription: "This is the button",
-      required: true,
-      emptyText: "Enter button text here.",
-    }),
-    new Checkbox({
-      name: "checkbox",
-      text: "click this checkbox",
-      required: false,
-    }),
-  ]),
-  sharedSEOTab,
-]);
+generate("./tests/select", select);
 
-const checkbox = new Checkbox({
-  name: "checkbox",
-  text: "click this checkbox",
-  checked: false,
-});
 
-generate("./tests/checkbox-new", checkbox);
-
-generate("./tests/button-new", buttonDialog);
-
-const titleDialog = createTabsDialog("Title", [
-  createTab(0, "Properties", [createTextField({ name: "titleText" })]),
-  sharedSEOTab,
-]);
-
-generate("./tests/title-new", titleDialog);

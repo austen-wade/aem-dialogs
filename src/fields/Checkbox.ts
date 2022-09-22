@@ -1,14 +1,10 @@
-import { formatWithOptions } from "util";
 import { AemNode } from "../AemNode";
-import { ResourceType } from "../types";
-import { aembool, getName } from "../utils";
+import { FieldOptions } from "./Field";
 
-export interface CheckboxOptions {
+export interface CheckboxOptions extends FieldOptions {
   name: string;
   text?: string;
-  fieldDescription?: string;
   required?: boolean;
-  tooltipPosition?: "right" | "left" | "top" | "bottom";
   checked?: boolean;
   value?: string;
   uncheckedValue?: string;

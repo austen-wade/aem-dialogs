@@ -18,11 +18,15 @@ export class AemNode {
   }
 
   addProp(field: string, value: any) {
+    console.log({ type: typeof value });
+
     if (typeof value !== undefined) {
       if (typeof value === "boolean") {
         value = aembool(value);
       } else if (field === "name") {
         value = getName(value);
+      } else if (Array.isArray(value)) {
+        value = value.join(', ');
       }
       this.props.push({ field: field, value: value });
     }
