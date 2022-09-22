@@ -13,6 +13,8 @@ export enum ResourceType {
   PATH_BROWSER = "granite/ui/components/coral/foundation/form/pathbrowser",
   TEXTAREA = "granite/ui/components/coral/foundation/form/textarea",
   SELECT = "granite/ui/components/coral/foundation/form/select",
+  FIELD = "granite/ui/components/coral/foundation/form/field",
+  MULTIFIELD = "granite/ui/components/coral/foundation/form/multifield"
 }
 
 export type Prop = {
