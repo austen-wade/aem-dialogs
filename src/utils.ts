@@ -31,7 +31,7 @@ export function formatXml(xml: string) {
 }
 
 export function getName(name: string) {
-    if (name.startsWith("./")) {
+    if (name.startsWith('./')) {
         return name;
     }
 
@@ -40,8 +40,8 @@ export function getName(name: string) {
 
 export function aembool(b: boolean): string {
     if (b) {
-        return "{Boolean}true";
+        return '{Boolean}true';
     }
 
-    return "{Boolean}false";
+    return '{Boolean}false';
 }

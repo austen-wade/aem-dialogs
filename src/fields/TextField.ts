@@ -1,6 +1,6 @@
-import { AemNode } from "../AemNode";
-import { ResourceType } from "../types";
-import { FieldOptions } from "./Field";
+import { AemNode } from '../AemNode';
+import { ResourceType } from '../types';
+import { FieldOptions } from './Field';
 
 export interface TextFieldOptions extends FieldOptions {
   emptyText?: string;
@@ -9,7 +9,7 @@ export interface TextFieldOptions extends FieldOptions {
 }
 
 export class TextField extends AemNode {
-    options: TextFieldOptions = { name: "text" };
+    options: TextFieldOptions = { name: 'text' };
 
     constructor(options: TextFieldOptions) {
         super(options.name, ResourceType.TEXTFIELD);

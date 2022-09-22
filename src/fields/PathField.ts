@@ -1,6 +1,6 @@
-import { AemNode } from "../AemNode";
-import { ResourceType } from "../types";
-import { FieldOptions } from "./Field";
+import { AemNode } from '../AemNode';
+import { ResourceType } from '../types';
+import { FieldOptions } from './Field';
 
 export interface PathFieldOptions extends FieldOptions {
     name: string,

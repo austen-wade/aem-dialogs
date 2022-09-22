@@ -1,5 +1,5 @@
-import { Prop } from "./types";
-import { aembool, getName } from "./utils";
+import { Prop } from './types';
+import { aembool, getName } from './utils';
 
 export interface BaseOptions {
     tag?: string,
@@ -13,8 +13,8 @@ export class AemNode {
 
     constructor(tag: string, resourceType?: string, props?: Prop[]) {
         this.props = props || [];
-        this.addProp("jcr:primaryType", "nt:unstructured");
-        this.addProp("sling:resourceType", resourceType);
+        this.addProp('jcr:primaryType', 'nt:unstructured');
+        this.addProp('sling:resourceType', resourceType);
         this.tag = tag;
     }
 
@@ -24,9 +24,9 @@ export class AemNode {
 
     addProp(field: string, value: any) {
         if (typeof value !== undefined) {
-            if (typeof value === "boolean") {
+            if (typeof value === 'boolean') {
                 value = aembool(value);
-            } else if (field === "name") {
+            } else if (field === 'name') {
                 value = getName(value);
             } else if (Array.isArray(value)) {
                 value = value.join(', ');
@@ -36,7 +36,7 @@ export class AemNode {
     }
 
     xml(isRoot?: boolean): string {
-        let attributesString = "";
+        let attributesString = '';
 
         for (const prop of this.props) {
             if (!prop.value) {
@@ -47,23 +47,23 @@ export class AemNode {
 
         let output = `<${this.tag}${attributesString}`;
         if (isRoot) {
-            output = `<?xml version="1.0" encoding="UTF-8"?>` + output;
+            output = '<?xml version="1.0" encoding="UTF-8"?>' + output;
         }
         if (this.children.length) {
-            output += `>`;
+            output += '>';
             for (const child of this.children) {
                 output += `${child.xml(false)}`;
             }
             output += `</${this.tag}>`;
         } else {
-            output += `/>`;
+            output += '/>';
         }
 
         return output;
     }
 
     items(children?: AemNode[]): AemNode {
-        const items = new AemNode("items");
+        const items = new AemNode('items');
         this.addChild(items);
 
         children?.forEach((c) => items.addChild(c));

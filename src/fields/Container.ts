@@ -1,5 +1,5 @@
-import { AemNode, BaseOptions } from "../AemNode";
-import { ResourceType } from "../types";
+import { AemNode, BaseOptions } from '../AemNode';
+import { ResourceType } from '../types';
 
 export interface ContainerOptions extends BaseOptions {
     name: string,
@@ -8,7 +8,7 @@ export interface ContainerOptions extends BaseOptions {
     'granite:class'?: string,
 }
 export class Container extends AemNode {
-    options: ContainerOptions = { name: "container" };
+    options: ContainerOptions = { name: 'container' };
 
     constructor(options: ContainerOptions) {
         super(options.name, ResourceType.CONTAINER);
