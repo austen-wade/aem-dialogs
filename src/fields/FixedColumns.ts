@@ -2,15 +2,14 @@ import { AemNode, BaseOptions } from "../AemNode";
 import { ResourceType } from "../types";
 
 export interface FixedColumnsOptions extends BaseOptions {
-    name: string;
     margin?: boolean;
     maximized?: boolean;
 }
 export class FixedColumns extends AemNode {
-    options: FixedColumnsOptions = { name: "columns" };
+    options: FixedColumnsOptions = {};
 
-    constructor(options: FixedColumnsOptions) {
-        super(options.name, ResourceType.FIXED_COLUMNS);
+    constructor(tag = "columns", options?: FixedColumnsOptions) {
+        super(tag, ResourceType.FIXED_COLUMNS);
         for (const key in options) {
             this.addProp(key, options[key as keyof FixedColumnsOptions]);
         }

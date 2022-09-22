@@ -1,8 +1,9 @@
 import { AemNode, BaseOptions } from "../AemNode";
 import { ResourceType } from "../types";
+import { aembool, getName } from "../utils";
 
 export interface FieldOptions extends BaseOptions {
-    name: string;
+    name?: string;
     fieldLabel?: string;
     fieldDescription?: string;
     renderHidden?: boolean;
@@ -13,8 +14,13 @@ export interface FieldOptions extends BaseOptions {
 export class Field extends AemNode {
     options: FieldOptions = { name: "columns" };
 
-    constructor(options: FieldOptions) {
-        super(options.name, ResourceType.FIELD);
+    constructor(tag: string, options?: FieldOptions) {
+        super(tag, ResourceType.FIELD);
+
+        if (options && !options.name) {
+            options.name = tag;
+        }
+
         for (const key in options) {
             this.addProp(key, options[key as keyof FieldOptions]);
         }

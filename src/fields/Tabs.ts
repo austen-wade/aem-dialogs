@@ -1,18 +1,14 @@
-import { AemNode } from "../AemNode";
+import { AemNode, BaseOptions } from "../AemNode";
 import { ResourceType } from "../types";
 import { ContainerOptions } from "./Container";
 
-export interface TabsOptions {
-    tag: string;
-}
+export type TabsOptions = BaseOptions;
 
 export class DialogTabs extends AemNode {
-    options: TabsOptions = {
-        tag: "tabs",
-    };
+    options: TabsOptions = {};
 
-    constructor(options: TabsOptions) {
-        super(options.tag, ResourceType.TABS);
+    constructor(tag = "tabs", options?: TabsOptions) {
+        super(tag, ResourceType.TABS);
 
         for (const key in options) {
             this.addProp(key, options[key as keyof TabsOptions]);
@@ -23,12 +19,10 @@ export class DialogTabs extends AemNode {
 export type TabOptions = ContainerOptions;
 
 export class Tab extends AemNode {
-    options: TabOptions = {
-        tag: "tab",
-    };
+    options: TabOptions = {};
 
-    constructor(options: TabOptions) {
-        super(options.tag, ResourceType.CONTAINER);
+    constructor(tag = "tab", options?: TabOptions) {
+        super(tag, ResourceType.CONTAINER);
 
         for (const key in options) {
             this.addProp(key, options[key as keyof TabOptions]);

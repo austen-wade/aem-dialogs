@@ -11,35 +11,32 @@ import { generate } from "./generate";
 
 /* NEED TO ADD OPTIONAL FIELD TO EXPLICITLY DECLARE `name` ATTRIBUTE */
 
-const select = new Select({ name: "myselect" }).items([
-    new SelectOption({ name: "option1", text: "Orange", value: "--orange" }),
-    new SelectOption({ name: "option2", text: "Red", value: "--red" }),
-    new SelectOption({ name: "option3", text: "Green", value: "--green" }),
+const select = new Select("select").items([
+    new SelectOption("option1", { text: "Orange", value: "--orange" }),
+    new SelectOption("option2", { text: "Red", value: "--red" }),
+    new SelectOption("option3", { text: "Green", value: "--green" }),
 ]);
 generate("./tests/select", select);
 
-const radioGroup = new RadioGroup({ name: "myradioGroup" }).items([
-    new RadioGroupItem({ name: "radio1", text: "Radio 1", value: "radio-1" }),
-    new RadioGroupItem({ name: "radio2", text: "Radio 2", value: "radio-2" }),
-    new RadioGroupItem({ name: "radio3", text: "Radio 3", value: "radio-3" }),
+const radioGroup = new RadioGroup("radiogroup").items([
+    new RadioGroupItem("radio1", { name: "radio1", text: "Radio 1", value: "radio-1" }),
+    new RadioGroupItem("radio2", { name: "radio2", text: "Radio 2", value: "radio-2" }),
+    new RadioGroupItem("radio3", { name: "radio3", text: "Radio 3", value: "radio-3" }),
 ]);
 generate("./tests/radiogroup", radioGroup);
 
-const multi = new Multifield({
-    name: "states",
+const multi = new Multifield("states", {
     fieldDescription: "Click '+' to add a new state.",
     composite: true,
 }).child(
-    new Container({ tag: "field" }).items([
-        new TextField({
-            name: "name",
+    new Container("field").items([
+        new TextField("name", {
             fieldLabel: "Name",
             fieldDescription: "Enter a state name",
             emptyText: "Name",
             required: true,
         }),
-        new PathField({
-            name: "flag",
+        new PathField("flagPath", {
             fieldLabel: "Flag",
             fieldDescription: "Select the state flag image",
             forceSelection: true,
@@ -52,11 +49,10 @@ generate("./tests/multi", multi);
 generate(
     "./tests/dialog",
     new JcrRoot().child(
-        new Container({ tag: "content" }).items([
-            new DialogTabs({ tag: "tabs" }).items([
-                new Tab({ tag: "tab1" }).items([multi, select]),
-                new Tab({ tag: "tab2" }).items([radioGroup]),
-            ]),
+        new Container("content").items([
+            new DialogTabs("tabs").items([new Tab("tab1").items([multi, select]), new Tab("tab2").items([radioGroup])]),
         ]),
     ),
 );
+
+generate("../tests/textfield", new TextField("text", { name: "buttonLabel" }));

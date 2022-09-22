@@ -2,8 +2,7 @@ import { Prop } from "./types";
 import { aembool, getName } from "./utils";
 
 export interface BaseOptions {
-    tag?: string;
-    name?: string;
+    "granite:class"?: string;
 }
 
 export class AemNode {
@@ -64,6 +63,7 @@ export class AemNode {
         return output;
     }
 
+    /* TODO: Items should not allow duplicate items */
     items(children?: AemNode[]): AemNode {
         const items = new AemNode("items");
         this.child(items);

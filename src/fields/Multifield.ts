@@ -3,7 +3,6 @@ import { ResourceType } from "../types";
 import { FieldOptions } from "./Field";
 
 export interface MultifieldOptions extends FieldOptions {
-    name: string;
     composite?: boolean;
     deleteHint?: boolean;
     typeHint?: string;
@@ -11,10 +10,14 @@ export interface MultifieldOptions extends FieldOptions {
     validation?: string;
 }
 export class Multifield extends AemNode {
-    options: MultifieldOptions = { name: "multifield" };
+    options: MultifieldOptions = {};
 
-    constructor(options: MultifieldOptions) {
-        super(options.name, ResourceType.MULTIFIELD);
+    constructor(tag = "multifield", options?: MultifieldOptions) {
+        super(tag, ResourceType.MULTIFIELD);
+
+        if (options && !options.name) {
+            options.name = tag;
+        }
 
         for (const key in options) {
             this.addProp(key, options[key as keyof MultifieldOptions]);

@@ -3,15 +3,19 @@ import { ResourceType } from "../types";
 import { FieldOptions } from "./Field";
 
 export interface PathBrowserOptions extends FieldOptions {
-    name: string,
-    rootPath: string,
-    required?: boolean,
+    rootPath: string;
+    required?: boolean;
 }
 export class PathBrowser extends AemNode {
-    options: PathBrowserOptions = { name: 'pathbrowser', rootPath: '/content' };
+    options: PathBrowserOptions = { rootPath: "/content" };
 
-    constructor(options: PathBrowserOptions) {
-        super(options.name, ResourceType.PATH_BROWSER);
+    constructor(tag = "pathbrowser", options?: PathBrowserOptions) {
+        super(tag, ResourceType.PATH_BROWSER);
+
+        if (options && !options.name) {
+            options.name = tag;
+        }
+
         for (const key in options) {
             this.addProp(key, options[key as keyof PathBrowserOptions]);
         }

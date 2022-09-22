@@ -3,7 +3,6 @@ import { ResourceType } from "../types";
 import { FieldOptions } from "./Field";
 
 export interface NumberFieldOptions extends FieldOptions {
-    name: string;
     value?: string;
     disabled?: boolean;
     typeHint?: string;
@@ -13,10 +12,15 @@ export interface NumberFieldOptions extends FieldOptions {
     step: number;
 }
 export class NumberField extends AemNode {
-    options: NumberFieldOptions = { name: "numberfield", step: 1 };
+    options: NumberFieldOptions = { step: 1 };
 
-    constructor(options: NumberFieldOptions) {
-        super(options.name, ResourceType.NUMBER_FIELD);
+    constructor(tag = "numberfield", options?: NumberFieldOptions) {
+        super(tag, ResourceType.NUMBER_FIELD);
+
+        if (options && !options.name) {
+            options.name = tag;
+        }
+
         for (const key in options) {
             this.addProp(key, options[key as keyof NumberFieldOptions]);
         }

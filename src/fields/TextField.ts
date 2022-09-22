@@ -3,16 +3,20 @@ import { ResourceType } from "../types";
 import { FieldOptions } from "./Field";
 
 export interface TextFieldOptions extends FieldOptions {
-  emptyText?: string;
-  name: string;
-  required?: boolean;
+    emptyText?: string;
+    required?: boolean;
 }
 
 export class TextField extends AemNode {
-    options: TextFieldOptions = { name: "text" };
+    options: TextFieldOptions = {};
 
-    constructor(options: TextFieldOptions) {
-        super(options.name, ResourceType.TEXTFIELD);
+    constructor(tag = "text", options?: TextFieldOptions) {
+        super(tag, ResourceType.TEXTFIELD);
+
+        if (options && !options.name) {
+            options.name = tag;
+        }
+
         for (const key in options) {
             this.addProp(key, options[key as keyof TextFieldOptions]);
         }

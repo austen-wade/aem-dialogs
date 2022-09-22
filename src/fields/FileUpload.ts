@@ -4,7 +4,6 @@ import { ResourceType } from "../types";
 import { FieldOptions } from "./Field";
 
 export interface FileUploadOptions extends FieldOptions {
-    name: string;
     emptyText?: string;
     disabled?: boolean;
     required?: boolean;
@@ -28,12 +27,15 @@ export interface FileUploadOptions extends FieldOptions {
     class?: string;
 }
 export class FileUpload extends AemNode {
-    options: FileUploadOptions = {
-        name: "date",
-    };
+    options: FileUploadOptions = {};
 
-    constructor(options: FileUploadOptions) {
-        super(options.name, ResourceType.FILE_UPLOAD);
+    constructor(tag = "fileupload", options?: FileUploadOptions) {
+        super(tag, ResourceType.FILE_UPLOAD);
+
+        if (options && !options.name) {
+            options.name = tag;
+        }
+
         for (const key in options) {
             this.addProp(key, options[key as keyof FileUploadOptions]);
         }

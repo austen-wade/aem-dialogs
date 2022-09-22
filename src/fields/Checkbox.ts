@@ -1,4 +1,5 @@
 import { AemNode } from "../AemNode";
+import { ResourceType } from "../types";
 import { FieldOptions } from "./Field";
 
 export interface CheckboxOptions extends FieldOptions {
@@ -11,8 +12,13 @@ export interface CheckboxOptions extends FieldOptions {
 }
 
 export class Checkbox extends AemNode {
-    constructor(options?: CheckboxOptions, tag = "checkbox", resourceType = "granite/field/checkbox") {
-        super(tag, resourceType);
+    constructor(tag = "checkbox", options?: CheckboxOptions) {
+        super(tag, ResourceType.CHECKBOX);
+
+        if (options && !options.name) {
+            options.name = tag;
+        }
+
         for (const key in options) {
             this.addProp(key, options[key as keyof CheckboxOptions]);
         }
