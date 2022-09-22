@@ -1,5 +1,5 @@
-import { AemNode, BaseOptions } from '../AemNode';
-import { ResourceType } from '../types';
+import { AemNode, BaseOptions } from "../AemNode";
+import { ResourceType } from "../types";
 
 export interface DatePickerOptions extends BaseOptions {
     name: string;
@@ -12,10 +12,10 @@ export interface DatePickerOptions extends BaseOptions {
 }
 export class DatePicker extends AemNode {
     options: DatePickerOptions = {
-        name: 'date',
-        displayedFormat: 'MM-DD-YYYY HH:mm',
-        type: 'datetime',
-        typeHint: 'Date',
+        name: "date",
+        displayedFormat: "MM-DD-YYYY HH:mm",
+        type: "datetime",
+        typeHint: "Date",
     };
 
     constructor(options: DatePickerOptions) {

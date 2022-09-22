@@ -11,11 +11,7 @@ export interface CheckboxOptions extends FieldOptions {
 }
 
 export class Checkbox extends AemNode {
-    constructor(
-        options?: CheckboxOptions,
-        tag = "checkbox",
-        resourceType = "granite/field/checkbox"
-    ) {
+    constructor(options?: CheckboxOptions, tag = "checkbox", resourceType = "granite/field/checkbox") {
         super(tag, resourceType);
         for (const key in options) {
             this.addProp(key, options[key as keyof CheckboxOptions]);

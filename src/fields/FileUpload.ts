@@ -4,32 +4,32 @@ import { ResourceType } from "../types";
 import { FieldOptions } from "./Field";
 
 export interface FileUploadOptions extends FieldOptions {
-    name: string,
-    emptyText?: string,
-    disabled?: boolean,
-    required?: boolean,
-    async?: boolean,
-    multiple?: boolean,
-    sizeLimit?: number,
-    mimeTypes?: string,
-    text?: string,
-    hideText?: boolean,
-    icon?: GraniteIcon,
-    iconSize?: IconSize,
-    size?: ButtonSize,
-    variant?: ButtonVariants,
-    allowUpload?: boolean,
-    fileNameParameter?: string,
-    fileReferenceParameter?: string,
-    title?: string,
-    uploadUrl?: string,
-    useHTML5?: boolean,
-    autoStart?: boolean,
-    class?: string,
+    name: string;
+    emptyText?: string;
+    disabled?: boolean;
+    required?: boolean;
+    async?: boolean;
+    multiple?: boolean;
+    sizeLimit?: number;
+    mimeTypes?: string;
+    text?: string;
+    hideText?: boolean;
+    icon?: GraniteIcon;
+    iconSize?: IconSize;
+    size?: ButtonSize;
+    variant?: ButtonVariants;
+    allowUpload?: boolean;
+    fileNameParameter?: string;
+    fileReferenceParameter?: string;
+    title?: string;
+    uploadUrl?: string;
+    useHTML5?: boolean;
+    autoStart?: boolean;
+    class?: string;
 }
 export class FileUpload extends AemNode {
     options: FileUploadOptions = {
-        name: 'date',
+        name: "date",
     };
 
     constructor(options: FileUploadOptions) {

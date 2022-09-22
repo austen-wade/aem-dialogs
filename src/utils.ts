@@ -1,10 +1,10 @@
 export function formatXml(xml: string) {
-    let formatted = '';
+    let formatted = "";
     const reg = /(>)(<)(\/*)/g;
-    xml = xml.replace(reg, '$1\r\n$2$3');
+    xml = xml.replace(reg, "$1\r\n$2$3");
     let pad = 0;
 
-    xml.split('\r\n').forEach(function (node) {
+    xml.split("\r\n").forEach(function (node) {
         let indent = 0;
         if (node.match(/.+<\/\w[^>]*>$/)) {
             indent = 0;
@@ -18,12 +18,12 @@ export function formatXml(xml: string) {
             indent = 0;
         }
 
-        let padding = '';
+        let padding = "";
         for (let i = 0; i < pad; i++) {
-            padding += '  ';
+            padding += "  ";
         }
 
-        formatted += padding + node + '\r\n';
+        formatted += padding + node + "\r\n";
         pad += indent;
     });
 
@@ -31,7 +31,7 @@ export function formatXml(xml: string) {
 }
 
 export function getName(name: string) {
-    if (name.startsWith('./')) {
+    if (name.startsWith("./")) {
         return name;
     }
 
@@ -40,8 +40,8 @@ export function getName(name: string) {
 
 export function aembool(b: boolean): string {
     if (b) {
-        return '{Boolean}true';
+        return "{Boolean}true";
     }
 
-    return '{Boolean}false';
+    return "{Boolean}false";
 }

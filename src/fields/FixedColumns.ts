@@ -2,9 +2,9 @@ import { AemNode, BaseOptions } from "../AemNode";
 import { ResourceType } from "../types";
 
 export interface FixedColumnsOptions extends BaseOptions {
-    name: string,
-    margin?: boolean,
-    maximized?: boolean,
+    name: string;
+    margin?: boolean;
+    maximized?: boolean;
 }
 export class FixedColumns extends AemNode {
     options: FixedColumnsOptions = { name: "columns" };

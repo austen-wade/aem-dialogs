@@ -1,6 +1,6 @@
-import { AemNode } from '../AemNode';
-import { ResourceType } from '../types';
-import { FieldOptions } from './Field';
+import { AemNode } from "../AemNode";
+import { ResourceType } from "../types";
+import { FieldOptions } from "./Field";
 
 export interface PathFieldOptions extends FieldOptions {
     name: string,
@@ -13,7 +13,7 @@ export interface PathFieldOptions extends FieldOptions {
     forceSelection?: boolean,
 }
 export class PathField extends AemNode {
-    options: PathFieldOptions = { name: 'pathfield', rootPath: '/content' };
+    options: PathFieldOptions = { name: "pathfield", rootPath: "/content" };
 
     constructor(options: PathFieldOptions) {
         super(options.name, ResourceType.PATH_FIELD);

@@ -1,4 +1,4 @@
-import { AemNode } from '../AemNode';
+import { AemNode } from "../AemNode";
 
 export interface SelectOptionOptions {
     name: string,
@@ -7,13 +7,13 @@ export interface SelectOptionOptions {
 }
 export class SelectOption extends AemNode {
     options: SelectOptionOptions = {
-        name: 'item',
-        text: 'Item',
-        value: 'item'
+        name: "item",
+        text: "Item",
+        value: "item"
     };
 
     constructor(options: SelectOptionOptions) {
-        super(options.name, '');
+        super(options.name, "");
         for (const key in options) {
             this.addProp(key, options[key as keyof SelectOptionOptions]);
         }

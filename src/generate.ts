@@ -1,6 +1,6 @@
-import { AemNode } from './AemNode';
-import { formatXml } from './utils';
-import { existsSync, mkdirSync, writeFileSync } from 'fs';
+import { AemNode } from "./AemNode";
+import { formatXml } from "./utils";
+import { existsSync, mkdirSync, writeFileSync } from "fs";
 
 export function generate(dirPath: string, xml: AemNode) {
     let output = xml.xml(true);

@@ -2,5 +2,11 @@
     "editor.tabSize": 4, "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
     },
-    "eslint.validate": ["javascript"]
+    "eslint.validate": ["javascript"],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.configPath": ".prettierrc.js",
+    "[typescript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    }
 }

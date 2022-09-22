@@ -1,12 +1,12 @@
-import { AemNode } from '../AemNode';
-import { ResourceType } from '../types';
-import { FieldOptions } from './Field';
+import { AemNode } from "../AemNode";
+import { ResourceType } from "../types";
+import { FieldOptions } from "./Field";
 
 export interface SelectOptions extends FieldOptions {
     name: string,
 }
 export class Select extends AemNode {
-    options: SelectOptions = { name: 'select' };
+    options: SelectOptions = { name: "select" };
 
     constructor(options: SelectOptions) {
         super(options.name, ResourceType.SELECT);
