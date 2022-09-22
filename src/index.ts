@@ -9,8 +9,6 @@ import { DialogTabs, Tab } from "./fields/Tabs";
 import { TextField } from "./fields/TextField";
 import { generate } from "./generate";
 
-/* NEED TO ADD OPTIONAL FIELD TO EXPLICITLY DECLARE `name` ATTRIBUTE */
-
 const select = new Select("select").items([
     new SelectOption("option1", { text: "Orange", value: "--orange" }),
     new SelectOption("option2", { text: "Red", value: "--red" }),
