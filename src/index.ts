@@ -1,30 +1,48 @@
-import { AemNode } from './AemNode';
-import { createCheckboxField, createTab, createTabsDialog, createTextField } from './creates';
-import { generate } from './generate';
+import { AemNode } from "./AemNode";
+import {
+  createCheckboxField,
+  createTab,
+  createTabsDialog,
+  createTextField,
+} from "./creates";
+import { Checkbox } from "./fields/Checkbox";
+import { generate } from "./generate";
 
-const sharedSEOTab: AemNode = createTab(1, 'SEO', [
-    createTextField({ name: 'seoText' }),
+const sharedSEOTab: AemNode = createTab(1, "SEO", [
+  createTextField({ name: "seoText" }),
 ]);
 
-const buttonDialog = createTabsDialog('Button', [
-    createTab(0, 'Properties', [
-        createTextField({
-            name: 'buttonText',
-            fieldLabel: 'Button Text',
-            fieldDescription: 'This is the button',
-            required: true,
-            emptyText: 'Enter button text here.',
-        }),
-        createCheckboxField({ name: 'checkbox', text: "click this checkbox", }),
-    ]),
-    sharedSEOTab,
+const buttonDialog = createTabsDialog("Button", [
+  createTab(0, "Properties", [
+    createTextField({
+      name: "buttonText",
+      fieldLabel: "Button Text",
+      fieldDescription: "This is the button",
+      required: true,
+      emptyText: "Enter button text here.",
+    }),
+    new Checkbox({
+      name: "checkbox",
+      text: "click this checkbox",
+      required: false,
+    }),
+  ]),
+  sharedSEOTab,
 ]);
 
-generate('./tests/button', buttonDialog);
+const checkbox = new Checkbox({
+  name: "checkbox",
+  text: "click this checkbox",
+  checked: false,
+});
 
-const titleDialog = createTabsDialog('Title', [
-    createTab(0, 'Properties', [createTextField({ name: 'titleText' })]),
-    sharedSEOTab,
+generate("./tests/checkbox-new", checkbox);
+
+generate("./tests/button-new", buttonDialog);
+
+const titleDialog = createTabsDialog("Title", [
+  createTab(0, "Properties", [createTextField({ name: "titleText" })]),
+  sharedSEOTab,
 ]);
 
-generate('./tests/title', titleDialog);
+generate("./tests/title-new", titleDialog);
