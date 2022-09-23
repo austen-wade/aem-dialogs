@@ -8,7 +8,8 @@
     "scripts": {
         "ts-types": "tsc --emitDeclarationOnly --outDir lib",
         "clean": "rimraf lib",
-        "build": "pnpm run clean && node esbuilder.mjs && pnpm run ts-types"
+        "build": "pnpm run clean && node esbuilder.mjs && pnpm run ts-types",
+        "test": "node ./test/test.js"
     },
     "keywords": [],
     "author": "",
