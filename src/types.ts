@@ -1,4 +1,3 @@
-// NEEDS REAL VALUES
 export enum ResourceType {
     DIALOG = "cq/gui/components/authoring/dialog",
     TEXTFIELD = "granite/ui/components/coral/foundation/form/textfield",
