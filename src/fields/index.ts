@@ -1,39 +1,17 @@
-import { Checkbox } from "./Checkbox";
-import { Container } from "./Container";
-import { DatePicker } from "./DatePicker";
-import { Field } from "./Field";
-import { FileUpload } from "./FileUpload";
-import { FixedColumns } from "./FixedColumns";
-import { JcrRoot } from "./JcrRoot";
-import { Multifield } from "./Multifield";
-import { NumberField } from "./NumberField";
-import { PathBrowser } from "./PathBrowser";
-import { PathField } from "./PathField";
-import { RadioGroup, RadioGroupItem } from "./RadioGroup";
-import { Select } from "./Select";
-import { SelectOption } from "./SelectOption";
-import { DialogTabs, Tab } from "./Tabs";
-import { Textarea } from "./Textarea";
-import { TextField } from "./TextField";
-
-export default {
-    Checkbox,
-    Container,
-    DatePicker,
-    Field,
-    FileUpload,
-    FixedColumns,
-    JcrRoot,
-    Multifield,
-    NumberField,
-    PathBrowser,
-    PathField,
-    RadioGroup,
-    RadioGroupItem,
-    Select,
-    SelectOption,
-    DialogTabs,
-    Tab,
-    Textarea,
-    TextField,
-};
+export { Checkbox } from "./Checkbox";
+export { Container } from "./Container";
+export { DatePicker } from "./DatePicker";
+export { Field } from "./Field";
+export { FileUpload } from "./FileUpload";
+export { FixedColumns } from "./FixedColumns";
+export { JcrRoot } from "./JcrRoot";
+export { Multifield } from "./Multifield";
+export { NumberField } from "./NumberField";
+export { PathBrowser } from "./PathBrowser";
+export { PathField } from "./PathField";
+export { RadioGroup, RadioGroupItem } from "./RadioGroup";
+export { Select } from "./Select";
+export { SelectOption } from "./SelectOption";
+export { DialogTabs, Tab } from "./Tabs";
+export { Textarea } from "./Textarea";
+export { TextField } from "./TextField";
