@@ -12,6 +12,10 @@
         "test": "jest",
         "test:update": "jest -U"
     },
+    "files": [
+        "lib",
+        "README.md"
+    ],
     "keywords": [],
     "author": "",
     "license": "ISC",
