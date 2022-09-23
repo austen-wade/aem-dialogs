@@ -5,6 +5,5 @@ export interface ContainerOptions extends BaseOptions {
     "granite:class"?: string;
 }
 export declare class Container extends AemNode {
-    options: ContainerOptions;
     constructor(tag?: string, options?: ContainerOptions);
 }
