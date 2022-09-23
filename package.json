@@ -6,7 +6,7 @@
     "module": "lib/index.js",
     "types": "lib/index.d.ts",
     "scripts": {
-        "ts-types": "tsc --emitDeclarationOnly --outDir lib",
+        "ts-types": "tsc -p tsconfig-build.json",
         "clean": "rimraf lib",
         "build": "pnpm run clean && node esbuilder.mjs && pnpm run ts-types",
         "test": "jest",
