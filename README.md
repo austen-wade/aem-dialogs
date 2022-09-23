@@ -38,3 +38,34 @@ generate("./tests/multi", multi);
     -   Only supports dialog with tabs right now (DialogTabs)
 -   End goal is to have this somewhere inside of ui.frontend.
     -   Implementation structure will likely resemble the clientlib.config.js/aem-clientlib-generator.
+
+## Important Methods
+
+`parent.child(child: AemNode)`:
+Attaches a `child` AemNode to a parent AemNode.
+
+`parent.items(children: AemNode[])`: Creates an `<items />` node and attaches it to an AemNode. Contents populated by `children`.
+
+`generate(dirPath: string, xml: AemNode)`: Creates a .content.xml at `dirPath` with the `.xml()` output of the given AemNode.
+
+## Supported:
+
+-   AemNode: Can be used for anything that is not explicitly supported
+-   Checkbox
+-   Container
+-   DatePicker
+-   Field
+-   FileUpload
+-   FixedColumns
+-   JcrRoot
+-   Multifield
+-   NumberField
+-   PathBrowser
+-   PathField
+-   RadioGroup, RadioGroupItem
+-   Select
+-   SelectOption
+-   DialogTabs
+-   Tab
+-   Textarea
+-   TextField
