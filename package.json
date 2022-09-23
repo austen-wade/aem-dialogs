@@ -1,7 +1,7 @@
 {
-    "name": "dialog-compiler-ts",
+    "name": "ts-granite-dialogs",
     "version": "1.0.0",
-    "description": "",
+    "description": "Typescript API for creating Granite UI Dialogs",
     "main": "lib/index.js",
     "module": "lib/index.js",
     "types": "lib/index.d.ts",
