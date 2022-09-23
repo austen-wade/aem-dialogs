@@ -14,7 +14,7 @@ export interface TextareaOptions extends FieldOptions {
     rows?: number;
     resize?: "none" | "both" | "horizontal" | "vertical";
 }
-class Textarea extends AemNode {
+export class Textarea extends AemNode {
     options: TextareaOptions = {};
 
     constructor(tag = "textarea", options?: TextareaOptions) {

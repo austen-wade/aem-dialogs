@@ -1,6 +1,5 @@
 import { AemNode, BaseOptions } from "../AemNode";
 import { ResourceType } from "../types";
-import { aembool, getName } from "../utils";
 
 export interface FieldOptions extends BaseOptions {
     name?: string;

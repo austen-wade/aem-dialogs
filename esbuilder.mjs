@@ -1,17 +1,19 @@
-import esbuild from 'esbuild';
-import { nodeExternalsPlugin } from 'esbuild-node-externals';
-import eslint from 'esbuild-plugin-eslint';
+import esbuild from "esbuild";
+import { nodeExternalsPlugin } from "esbuild-node-externals";
+import eslint from "esbuild-plugin-eslint";
 
 (async () => {
     await esbuild.build({
-        entryPoints: ['./src/index.ts'],
+        entryPoints: ["./src/index.ts"],
+        outdir: "lib",
         bundle: true,
-        platform: 'node',
-        target: ['node10.4'],
-        outfile: './dist/out.js',
+        platform: "node",
+        target: ["esnext"],
         color: true,
-        logLevel: 'info',
+        logLevel: "info",
         sourcemap: true,
+        minify: true,
+        format: "esm",
         plugins: [
             eslint({
                 fix: true,
