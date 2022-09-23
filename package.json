@@ -9,7 +9,8 @@
         "ts-types": "tsc --emitDeclarationOnly --outDir lib",
         "clean": "rimraf lib",
         "build": "pnpm run clean && node esbuilder.mjs && pnpm run ts-types",
-        "test": "jest"
+        "test": "jest",
+        "test:update": "jest -U"
     },
     "keywords": [],
     "author": "",

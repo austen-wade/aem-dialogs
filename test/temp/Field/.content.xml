@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/field" name="./testname" fieldLabel="field label" fieldDescription="field description" renderHidden="{Boolean}false" wrapperClass="wrapper class" tooltipPosition="left" granite:class="granite class"/>
