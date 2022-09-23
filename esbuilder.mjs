@@ -1,5 +1,4 @@
 import esbuild from "esbuild";
-import { nodeExternalsPlugin } from "esbuild-node-externals";
 import eslint from "esbuild-plugin-eslint";
 
 (async () => {
