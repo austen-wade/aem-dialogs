@@ -1,7 +1,7 @@
 {
-    "name": "ts-granite-dialogs",
-    "version": "1.0.0",
-    "description": "Typescript API for creating Granite UI Dialogs",
+    "name": "aem-dialogs",
+    "version": "0.1.0",
+    "description": "Typescript API for creating Coral Dialogs for AEM",
     "main": "lib/index.js",
     "module": "lib/index.js",
     "types": "lib/index.d.ts",
