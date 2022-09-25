@@ -17,8 +17,12 @@ export class AemNode {
         this.tag = tag;
     }
 
-    child(child: AemNode): AemNode {
-        this.children.push(child);
+    child(child: AemNode | AemNode[]): AemNode {
+        if (Array.isArray(child)) {
+            child.forEach(c => this.children.push(c));
+        } else {
+            this.children.push(child);
+        }
 
         return this;
     }
