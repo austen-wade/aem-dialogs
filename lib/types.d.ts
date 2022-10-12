@@ -14,7 +14,8 @@ export declare enum ResourceType {
     SELECT = "granite/ui/components/coral/foundation/form/select",
     FIELD = "granite/ui/components/coral/foundation/form/field",
     MULTIFIELD = "granite/ui/components/coral/foundation/form/multifield",
-    RADIO_GROUP = "granite/ui/components/coral/foundation/form/radiogroup"
+    RADIO_GROUP = "granite/ui/components/coral/foundation/form/radiogroup",
+    RICH_TEXT = "cq/gui/components/authoring/dialog/richtext"
 }
 export declare type Prop = {
     field: string;
