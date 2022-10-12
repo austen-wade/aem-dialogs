@@ -16,10 +16,12 @@ export class DialogTabs extends AemNode {
     }
 }
 
-export type TabOptions = ContainerOptions;
+export interface TabOptions extends BaseOptions {
+    title: string;
+}
 
 export class Tab extends AemNode {
-    options: TabOptions = {};
+    options: TabOptions = { title: 'Properties' };
 
     constructor(tag = "tab", options?: TabOptions) {
         super(tag, ResourceType.CONTAINER);
