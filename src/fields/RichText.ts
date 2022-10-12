@@ -1,4 +1,5 @@
 import { AemNode } from "../AemNode";
+import { RTE_CONFIGS } from "../Defaults";
 import { ResourceType } from "../types";
 import { FieldOptions } from "./Field";
 
@@ -20,24 +21,8 @@ export interface RichTextOptions extends FieldOptions {
 
 export class RichText extends AemNode {
     options: RichTextOptions = {
-        rteChars: [
-            { entity: "&amp;copy;", name: "copyright" },
-            { entity: "&amp;copy;", name: "copyright" },
-            { entity: "&amp;euro;", name: "euro" },
-            { entity: "&amp;reg;", name: "registered" },
-            { entity: "&amp;trade;", name: "trademark" },
-        ],
-        rteFormats: [
-            { description: "Paragraph", tag: "p" },
-            { description: "Heading 1", tag: "h1" },
-            { description: "Heading 2", tag: "h2" },
-            { description: "Heading 3", tag: "h3" },
-            { description: "Heading 4", tag: "h4" },
-            { description: "Heading 5", tag: "h5" },
-            { description: "Heading 6", tag: "h6" },
-            { description: "Quote", tag: "blockquote" },
-            { description: "Preformatted", tag: "pre" },
-        ],
+        rteChars: [...RTE_CONFIGS.chars],
+        rteFormats: [...RTE_CONFIGS.formats],
     };
 
     constructor(tag = "text", options?: RichTextOptions) {
