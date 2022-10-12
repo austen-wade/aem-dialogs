@@ -32,11 +32,10 @@ generate("./tests/multi", multi);
 
 ## To do
 
--   Refactor based on best practices for Typescript (I am not a daily Typescript user)
 -   Complete all Granite Coral based interfaces/class for convenience
-    -   RichText in progress
+    -   RichText (Advanced Support)
     -   Only supports dialog with tabs right now (DialogTabs)
--   End goal is to have this somewhere inside of ui.frontend.
+-   End goal is to have this easily droppable inside of ui.frontend.
     -   Implementation structure will likely resemble the clientlib.config.js/aem-clientlib-generator.
 
 ## Important Methods
@@ -63,6 +62,7 @@ Attaches a `child` AemNode to a parent AemNode.
 -   PathBrowser
 -   PathField
 -   RadioGroup, RadioGroupItem
+-   RichText (basics like adding chars and formats)
 -   Select
 -   SelectOption
 -   DialogTabs
