@@ -21,7 +21,7 @@ export interface TabOptions extends BaseOptions {
 }
 
 export class Tab extends AemNode {
-    options: TabOptions = { title: 'Properties' };
+    options: TabOptions = { title: "Properties" };
 
     constructor(tag = "tab", options?: TabOptions) {
         super(tag, ResourceType.CONTAINER);

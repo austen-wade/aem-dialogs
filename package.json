@@ -1,10 +1,11 @@
 {
     "name": "aem-dialogs",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Typescript API for creating Coral Dialogs for AEM",
     "main": "lib/index.js",
     "module": "lib/index.js",
     "types": "lib/index.d.ts",
+    "homepage": "https://github.com/austen-wade/aem-dialogs",
     "scripts": {
         "ts-types": "tsc -p tsconfig-build.json",
         "clean": "rimraf lib",
@@ -17,7 +18,7 @@
         "README.md"
     ],
     "keywords": [],
-    "author": "",
+    "author": "Austen Wade, Connor Wade",
     "license": "ISC",
     "devDependencies": {
         "@tsconfig/node14": "^1.0.3",

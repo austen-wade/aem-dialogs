@@ -10,6 +10,7 @@ export { NumberField } from "./NumberField";
 export { PathBrowser } from "./PathBrowser";
 export { PathField } from "./PathField";
 export { RadioGroup, RadioGroupItem } from "./RadioGroup";
+export { RichText } from "./RichText";
 export { Select } from "./Select";
 export { SelectOption } from "./SelectOption";
 export { DialogTabs, Tab } from "./Tabs";
