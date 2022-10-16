@@ -7,7 +7,7 @@ export declare class AemNode {
     props: Prop[];
     readonly children: AemNode[];
     constructor(tag: string, resourceType?: string, props?: Prop[]);
-    child(child: AemNode): AemNode;
+    child(child: AemNode | AemNode[]): AemNode;
     addProp(field: string, value: any): void;
     xml(isRoot?: boolean): string;
     items(children?: AemNode[]): AemNode;

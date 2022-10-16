@@ -13,6 +13,7 @@ import {
     NumberField,
     PathBrowser,
     RadioGroup,
+    RichText,
     Select,
     SelectOption,
     Tab,
@@ -92,6 +93,8 @@ const radioGroup = new RadioGroup("RadioGroup", {
     name: "radioGroupName",
 });
 
+const richText = new RichText("RichText");
+
 const select = new Select("Select");
 
 const selectOption = new SelectOption("SelectOption", {
@@ -123,6 +126,7 @@ const nodeObjects = [
     pathBrowser,
     pathField,
     radioGroup,
+    richText,
     select,
     selectOption,
     tab,

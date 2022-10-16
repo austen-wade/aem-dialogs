@@ -1,3 +1,4 @@
+import { RichText } from "./fields";
 import { Prop } from "./types";
 import { aembool, getName } from "./utils";
 
@@ -17,8 +18,12 @@ export class AemNode {
         this.tag = tag;
     }
 
-    child(child: AemNode): AemNode {
-        this.children.push(child);
+    child(child: AemNode | AemNode[]): AemNode {
+        if (Array.isArray(child)) {
+            child.forEach((c) => this.children.push(c));
+        } else {
+            this.children.push(child);
+        }
 
         return this;
     }
@@ -37,6 +42,10 @@ export class AemNode {
     }
 
     xml(isRoot?: boolean): string {
+        if (this instanceof RichText) {
+            this.child(this.generateConfig());
+        }
+
         let attributesString = "";
 
         for (const prop of this.props) {
