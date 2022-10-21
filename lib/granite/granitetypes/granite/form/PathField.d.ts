@@ -1,6 +1,5 @@
 import { Filter } from "../LiteralTypes";
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/pathfield";
+import { FormField, IFormField } from "./Field";
 export interface IFormPathField extends IFormField {
     name?: string;
     emptyText?: string;
@@ -14,4 +13,7 @@ export interface IFormPathField extends IFormField {
     pickerSrc?: string;
     rootPath: string;
     filter: Filter;
+}
+export declare class PathField extends FormField<IFormPathField> {
+    constructor(tag: string, options?: IFormPathField);
 }

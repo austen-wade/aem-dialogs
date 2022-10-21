@@ -1,17 +1,19 @@
+import {
+    Checkbox,
+    DatePicker,
+    FileUpload,
+    Multifield,
+    NumberField,
+    PathField,
+    RadioGroup,
+    Select,
+} from "./granite/foundation/form";
+import { AdvancedSelect, Textarea } from "./granite/granitetypes/granite";
+
 export enum ResourceType {
     TEXTFIELD = "granite/ui/components/coral/foundation/form/textfield",
     CONTAINER = "granite/ui/components/coral/foundation/container",
-    CHECKBOX = "granite/ui/components/coral/foundation/form/checkbox",
-    PATH_FIELD = "granite/ui/components/coral/foundation/form/pathfield",
-    DATE_PICKER = "granite/ui/components/coral/foundation/form/datepicker",
-    FILE_UPLOAD = "cq/gui/components/authoring/dialog/fileupload",
-    NUMBER_FIELD = "granite/ui/components/coral/foundation/form/numberfield",
-    PATH_BROWSER = "granite/ui/components/coral/foundation/form/pathbrowser",
-    TEXTAREA = "granite/ui/components/coral/foundation/form/textarea",
-    SELECT = "granite/ui/components/coral/foundation/form/select",
     FIELD = "granite/ui/components/coral/foundation/form/field",
-    MULTIFIELD = "granite/ui/components/coral/foundation/form/multifield",
-    RADIO_GROUP = "granite/ui/components/coral/foundation/form/radiogroup",
     RICH_TEXT = "cq/gui/components/authoring/dialog/richtext",
     ACCORDION = "/libs/granite/ui/components/coral/foundation/accordion",
     ACTION_BAR = "/libs/granite/ui/components/coral/foundation/actionbar",
@@ -63,6 +65,24 @@ export enum ResourceType {
     RENDER_CONDITIONS_SIMPLE = "/libs/granite/ui/components/coral/foundation/renderconditions/simple",
     WIZARD_LAZY_CONTAINER = "/libs/granite/ui/components/coral/foundation/wizard/lazycontainer",
     WIZARD_LAZY_STEP = "/libs/granite/ui/components/coral/foundation/wizard/lazystep",
+    AUTHORIZABLE_SELECT_DATASOURCE = "/libs/granite/ui/components/coral/foundation/authorizable/selectdatasource",
+    VIEWPORT = "/libs/granite/ui/components/coral/foundation/admin/page/viewport",
+    DATASOURCE = "/libs/granite/ui/components/coral/foundation/querybuilder/datasource",
+    ADVANCED_SELECT = "/libs/granite/ui/components/coral/foundation/form/advancedselect",
+    ADVANCED_SELECT_STATUS = "/libs/granite/ui/components/coral/foundation/form/advancedselect/status",
+    BUTTON_GROUP = "/libs/granite/ui/components/coral/foundation/form/buttongroup",
+    CHECKBOX = "/libs/granite/ui/components/coral/foundation/form/checkbox",
+    DATE_PICKER = "/libs/granite/ui/components/coral/foundation/form/datepicker",
+    FILE_UPLOAD = "/libs/granite/ui/components/coral/foundation/form/fileupload",
+    HIDDEN = "/libs/granite/ui/components/coral/foundation/form/hidden",
+    MULTIFIELD = "/libs/granite/ui/components/coral/foundation/form/multifield",
+    NUMBER_FIELD = "/libs/granite/ui/components/coral/foundation/form/numberfield",
+    PASSWORD = "/libs/granite/ui/components/coral/foundation/form/password",
+    PATH_FIELD = "/libs/granite/ui/components/coral/foundation/form/pathfield",
+    RADIO_GROUP = "/libs/granite/ui/components/coral/foundation/form/radiogroup",
+    SELECT = "/libs/granite/ui/components/coral/foundation/form/select",
+    SWITCH = "/libs/granite/ui/components/coral/foundation/form/switch",
+    TEXTAREA = "/libs/granite/ui/components/coral/foundation/form/textarea",
 }
 
 export type Prop = {
@@ -71,3 +91,9 @@ export type Prop = {
 };
 
 export type Attributes = Record<string, string>;
+
+export enum RenderConditions {
+    AND = "/libs/granite/ui/components/coral/foundation/renderconditions/and",
+    NOT = "/libs/granite/ui/components/foundation/renderconditions/not",
+    OR = "/libs/granite/ui/components/coral/foundation/renderconditions/or",
+}

@@ -1,6 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 import { ICommonAttributes } from "./CommonAttributes";
-import { IGraniteContainer } from "./GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "./GraniteContainer";
 import { IRenderCondition } from "./RenderCondition";
 import { Orientation, TabsSize } from "./LiteralTypes";
 export interface ITabs extends ICommonAttributes, IRenderCondition, IGraniteContainer {
@@ -19,4 +19,13 @@ export interface ITabsItem {
 export interface ITabsItemParentconfig {
     active?: boolean;
     icon?: string;
+}
+export declare class Tabs extends GraniteContainer<ITabs> {
+    constructor(tag: string, options?: ITabs);
+}
+export declare class TabsItem extends GraniteContainer<ITabsItem> {
+    constructor(tag: string, options?: ITabsItem);
+}
+export declare class TabsItemParentconfig extends GraniteContainer<ITabsItemParentconfig> {
+    constructor(tag: string, options?: ITabsItemParentconfig);
 }

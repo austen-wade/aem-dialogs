@@ -1,5 +1,5 @@
 import { ICommonAttributes } from "./CommonAttributes";
-import { IGraniteContainer } from "./GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "./GraniteContainer";
 import { IRenderCondition } from "./RenderCondition";
 export interface IColumnView extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     selectionMode?: boolean;
@@ -16,4 +16,7 @@ export interface IColumnView extends ICommonAttributes, IRenderCondition, IGrani
     previewMaximized?: boolean;
     metaResourceType?: string;
     modeGroup?: string;
+}
+export declare class ColumnView extends GraniteContainer<IColumnView> {
+    constructor(tag: string, options: IColumnView);
 }

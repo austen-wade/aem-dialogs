@@ -1,1 +1,1 @@
-export { IPanelRailPanel } from "./RailPanel";
+export * from "./RailPanel";

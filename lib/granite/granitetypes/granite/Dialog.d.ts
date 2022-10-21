@@ -9,8 +9,12 @@ export interface IDialog extends ICommonAttributes, IRenderCondition, IGraniteCo
     variant?: DialogVariant;
     footer?: GraniteNode | GraniteNode[];
 }
-interface IDialogFooterItemParentconfig {
+export interface IDialogFooterItemParentconfig {
     close?: boolean;
 }
-export declare function DialogFooterItemParentconfig(tag?: string, options?: IDialogFooterItemParentconfig): GraniteContainer<IDialogFooterItemParentconfig>;
-export {};
+export declare class Dialog extends GraniteContainer<IDialog> {
+    constructor(tag: string, options: IDialog);
+}
+export declare class DialogFooterItemParentconfig extends GraniteContainer<IDialogFooterItemParentconfig> {
+    constructor(tag?: string, options?: IDialogFooterItemParentconfig);
+}

@@ -1,4 +1,4 @@
-import { IFormField } from "./Field";
+import { FormField, IFormField } from "./Field";
 export declare const FormTextField = "/libs/granite/ui/components/coral/foundation/form/textfield";
 export interface IFormTextField extends IFormField {
     name?: string;
@@ -10,4 +10,7 @@ export interface IFormTextField extends IFormField {
     autofocus?: boolean;
     validation?: string[];
     maxlength?: number;
+}
+export declare class TextField extends FormField<IFormTextField> {
+    constructor(tag: string, options?: IFormTextField);
 }

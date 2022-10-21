@@ -1,4 +1,5 @@
-import { IFormField } from "./Field";
+import { GraniteContainer } from "../GraniteContainer";
+import { FormField, IFormField } from "./Field";
 export interface IFormColorField extends IFormField {
     name?: string;
     value?: string;
@@ -14,4 +15,10 @@ export interface IFormColorField extends IFormField {
 }
 export interface IFormColorFieldItem {
     value?: string;
+}
+export declare class ColorField extends FormField<IFormColorField> {
+    constructor(tag: string, options?: IFormColorField);
+}
+export declare class ColorFieldItem extends GraniteContainer<IFormColorFieldItem> {
+    constructor(tag: string, options?: IFormColorFieldItem);
 }

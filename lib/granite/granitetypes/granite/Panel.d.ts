@@ -1,5 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 import { ICommonAttributes } from "./CommonAttributes";
+import { GraniteContainer } from "./GraniteContainer";
 import { IRenderCondition } from "./RenderCondition";
 export interface IPanel extends ICommonAttributes, IRenderCondition {
     margin?: boolean;
@@ -10,4 +11,10 @@ export interface IPanel extends ICommonAttributes, IRenderCondition {
 }
 export interface IPanelRailParentconfig {
     active?: boolean;
+}
+export declare class Panel extends GraniteContainer<IPanel> {
+    constructor(tag: string, options?: IPanel);
+}
+export declare class PanelRailParentconfig extends GraniteContainer<IPanelRailParentconfig> {
+    constructor(tag: string, options?: IPanelRailParentconfig);
 }

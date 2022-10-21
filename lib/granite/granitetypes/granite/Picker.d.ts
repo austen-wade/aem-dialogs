@@ -1,4 +1,5 @@
 import { GraniteNode } from "../../GraniteNode";
+import { GraniteContainer } from "./GraniteContainer";
 export interface IPicker {
     "jcr:title"?: string;
     modeGroup?: string;
@@ -18,4 +19,13 @@ export interface IPickerSearch {
 }
 export interface IPickerActions {
     selection?: GraniteNode | GraniteNode[];
+}
+export declare class Picker extends GraniteContainer<IPicker> {
+    constructor(tag: string, options?: IPicker);
+}
+export declare class PickerSearch extends GraniteContainer<IPickerSearch> {
+    constructor(tag: string, options?: IPickerSearch);
+}
+export declare class PickerActions extends GraniteContainer<IPickerActions> {
+    constructor(tag: string, options?: IPickerActions);
 }

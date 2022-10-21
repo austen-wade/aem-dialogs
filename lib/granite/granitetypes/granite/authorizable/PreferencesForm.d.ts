@@ -1,5 +1,5 @@
 import { ICommonAttributes } from "../CommonAttributes";
-import { IGraniteContainer } from "../GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "../GraniteContainer";
 import { AlignmentStyle } from "../LiteralTypes";
 import { IRenderCondition } from "../RenderCondition";
 export interface IAuthorizablePreferencesForm extends ICommonAttributes, IRenderCondition, IGraniteContainer {
@@ -10,4 +10,7 @@ export interface IAuthorizablePreferencesForm extends ICommonAttributes, IRender
     style?: AlignmentStyle;
     margin?: boolean;
     maximized?: boolean;
+}
+export declare class AuthorizablePreferencesForm extends GraniteContainer<IAuthorizablePreferencesForm> {
+    constructor(tag: string, options?: IAuthorizablePreferencesForm);
 }

@@ -1,6 +1,5 @@
 import { Resize } from "../LiteralTypes";
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/textarea";
+import { FormField, IFormField } from "./Field";
 export interface IFormTextarea extends IFormField {
     name?: string;
     value?: string;
@@ -14,4 +13,7 @@ export interface IFormTextarea extends IFormField {
     cols?: number;
     rows?: number;
     resize: Resize;
+}
+export declare class Textarea extends FormField<IFormTextarea> {
+    constructor(tag: string, options?: IFormTextarea);
 }

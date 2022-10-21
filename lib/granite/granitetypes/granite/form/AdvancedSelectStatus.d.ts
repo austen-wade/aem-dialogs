@@ -1,3 +1,6 @@
 import { ICommonAttributes } from "../CommonAttributes";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/advancedselect/status";
+import { FormField } from "./Field";
 export declare type IFormAdvancedSelectStatus = ICommonAttributes;
+export declare class AdvancedSelectStatus extends FormField<IFormAdvancedSelectStatus> {
+    constructor(tag: string, options?: IFormAdvancedSelectStatus);
+}

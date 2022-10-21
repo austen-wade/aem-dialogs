@@ -1,6 +1,7 @@
+import { ResourceType } from "../../../../types";
 import { GraniteNode } from "../../../GraniteNode";
 import { ICommonAttributes } from "../CommonAttributes";
-import { IGraniteContainer } from "../GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "../GraniteContainer";
 import { IRenderCondition } from "../RenderCondition";
 
 export interface IFormNestedCheckboxList extends ICommonAttributes, IRenderCondition, IGraniteContainer {
@@ -8,4 +9,16 @@ export interface IFormNestedCheckboxList extends ICommonAttributes, IRenderCondi
 }
 export interface IFormNestedCheckboxListSublist {
     sublist?: GraniteNode | GraniteNode[];
+}
+
+export class NestedCheckboxList extends GraniteContainer<IFormNestedCheckboxList> {
+    constructor(tag: string, options?: IFormNestedCheckboxList) {
+        super(tag, options, ResourceType.FORM_NESTED_CHECKBOX_LIST);
+    }
+}
+
+export class NestedCheckboxListSublist extends GraniteContainer<IFormNestedCheckboxListSublist> {
+    constructor(tag: string, options?: IFormNestedCheckboxListSublist) {
+        super(tag, options, ResourceType.FORM_NESTED_CHECKBOX_LIST);
+    }
 }

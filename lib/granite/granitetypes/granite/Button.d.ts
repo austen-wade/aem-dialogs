@@ -2,6 +2,7 @@ import { IconSize } from "../../../icons";
 import { ICommonAttributes } from "./CommonAttributes";
 import { IRenderCondition } from "./RenderCondition";
 import { Autocomplete, ButtonSize, ButtonType, ButtonVariant } from "./LiteralTypes";
+import { GraniteContainer } from "./GraniteContainer";
 export interface IButton extends ICommonAttributes, IRenderCondition {
     type?: ButtonType;
     disabled?: boolean;
@@ -20,4 +21,7 @@ export interface IButton extends ICommonAttributes, IRenderCondition {
     actionConfigName?: string;
     trackingFeature?: string;
     trackingElement?: string;
+}
+export declare class Button extends GraniteContainer<IButton> {
+    constructor(tag: string, options: IButton);
 }

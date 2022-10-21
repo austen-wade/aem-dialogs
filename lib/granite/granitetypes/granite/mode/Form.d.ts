@@ -1,5 +1,5 @@
 import { ICommonAttributes } from "../CommonAttributes";
-import { IGraniteContainer } from "../GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "../GraniteContainer";
 import { IRenderCondition } from "../RenderCondition";
 import { Mode } from "../LiteralTypes";
 export interface IModeForm extends ICommonAttributes, IRenderCondition, IGraniteContainer {
@@ -7,4 +7,7 @@ export interface IModeForm extends ICommonAttributes, IRenderCondition, IGranite
     group?: string;
     margin?: boolean;
     maximized?: boolean;
+}
+export declare class ModeForm extends GraniteContainer<IModeForm> {
+    constructor(tag: string, options?: IModeForm);
 }

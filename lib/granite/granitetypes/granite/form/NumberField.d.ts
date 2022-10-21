@@ -1,5 +1,4 @@
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/numberfield";
+import { FormField, IFormField } from "./Field";
 export interface IFormNumberField extends IFormField {
     name?: string;
     value?: string;
@@ -10,4 +9,7 @@ export interface IFormNumberField extends IFormField {
     min?: number;
     max?: number;
     step?: string;
+}
+export declare class NumberField extends FormField<IFormNumberField> {
+    constructor(tag: string, options?: IFormNumberField);
 }

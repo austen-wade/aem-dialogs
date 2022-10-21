@@ -1,6 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 import { ICommonAttributes } from "./CommonAttributes";
-import { IGraniteContainer } from "./GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "./GraniteContainer";
 import { IRenderCondition } from "./RenderCondition";
 import { AccordionVariant } from "./LiteralTypes";
 export interface IAccordion extends ICommonAttributes, IRenderCondition, IGraniteContainer {
@@ -15,4 +15,13 @@ export interface IAccordionItem {
 export interface IAccordionItemParentconfig {
     active?: boolean;
     disabled?: boolean;
+}
+export declare class Accordion extends GraniteContainer<IAccordion> {
+    constructor(tag: string, options?: IAccordion);
+}
+export declare class AccordionItem extends GraniteContainer<IAccordionItem> {
+    constructor(tag: string, options?: IAccordionItem);
+}
+export declare class AccordionItemParentconfig extends GraniteContainer<IAccordionItemParentconfig> {
+    constructor(tag: string, options?: IAccordionItemParentconfig);
 }

@@ -1,3 +1,3 @@
-export { IFormResponsesOpenPrompt } from "./OpenPrompt";
-export { IFormResponsesRedirect } from "./Redirect";
-export { IFormResponsesReload } from "./Reload";
+export * from "./OpenPrompt";
+export * from "./Redirect";
+export * from "./Reload";

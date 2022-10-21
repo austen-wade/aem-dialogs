@@ -1,2 +1,2 @@
-export { ICollectionAction } from "./Action";
-export { ICollectionActionLink } from "./ActionLink";
+export * from "./Action";
+export * from "./ActionLink";

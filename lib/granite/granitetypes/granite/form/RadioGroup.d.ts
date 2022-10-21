@@ -1,7 +1,6 @@
 import { ICommonAttributes } from "../CommonAttributes";
-import { IGraniteContainer } from "../GraniteContainer";
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/radiogroup";
+import { GraniteContainer, IGraniteContainer } from "../GraniteContainer";
+import { FormField, IFormField } from "./Field";
 export interface IFormRadioGroup extends IFormField, IGraniteContainer {
     name?: string;
     deleteHint?: boolean;
@@ -17,4 +16,10 @@ export interface IFormRadioGroupItem extends ICommonAttributes {
     checked?: boolean;
     text?: string;
     wrapperClass?: string;
+}
+export declare class RadioGroup extends FormField<IFormRadioGroup> {
+    constructor(tag: string, options?: IFormRadioGroup);
+}
+export declare class RadioGroupItem extends GraniteContainer<IFormRadioGroupItem> {
+    constructor(tag: string, options?: IFormRadioGroupItem);
 }

@@ -1,1 +1,4 @@
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/admin/page/viewport";
+import { GraniteContainer, IGraniteContainer } from "../../GraniteContainer";
+export declare class Viewport extends GraniteContainer<IGraniteContainer> {
+    constructor(tag: string, options?: IGraniteContainer);
+}

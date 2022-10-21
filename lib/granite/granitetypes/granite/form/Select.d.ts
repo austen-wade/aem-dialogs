@@ -1,9 +1,8 @@
 import { ICommonAttributes } from "../CommonAttributes";
-import { IGraniteContainer } from "../GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "../GraniteContainer";
 import { IRenderCondition } from "../RenderCondition";
 import { SelectVariant, StatusVariant } from "../LiteralTypes";
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/select";
+import { FormField, IFormField } from "./Field";
 export interface IFormSelect extends IFormField, IGraniteContainer {
     name?: string;
     emptyText?: string;
@@ -27,4 +26,10 @@ export interface IFormSelectItem extends ICommonAttributes, IRenderCondition {
     statusIcon?: string;
     statusText?: string;
     statusVariant?: StatusVariant;
+}
+export declare class Select extends FormField<IFormSelect> {
+    constructor(tag: string, options?: IFormSelect);
+}
+export declare class SelectItem extends GraniteContainer<IFormSelectItem> {
+    constructor(tag: string, options: IFormSelectItem);
 }

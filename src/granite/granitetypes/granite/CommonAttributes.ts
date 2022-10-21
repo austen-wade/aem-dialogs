@@ -1,5 +1,3 @@
-import { GraniteNode } from "../../GraniteNode";
-
 export interface ICommonAttributes {
     "granite:id"?: string;
     "granite:rel"?: string;

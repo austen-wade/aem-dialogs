@@ -1,6 +1,5 @@
 import { DatePickerType } from "../LiteralTypes";
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/datepicker";
+import { FormField, IFormField } from "./Field";
 export interface IFormDatePicker extends IFormField {
     name?: string;
     typeHint?: string;
@@ -17,4 +16,7 @@ export interface IFormDatePicker extends IFormField {
     displayTimezoneMessage?: boolean;
     beforeSelector?: string;
     afterSelector?: string;
+}
+export declare class DatePicker extends FormField<IFormDatePicker> {
+    constructor(tag: string, options?: IFormDatePicker);
 }

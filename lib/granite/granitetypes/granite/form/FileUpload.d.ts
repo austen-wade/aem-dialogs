@@ -1,7 +1,6 @@
 import { IconSize } from "../../../../icons";
 import { FileUploadSize, FileUploadVariant } from "../LiteralTypes";
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/fileupload";
+import { FormField, IFormField } from "./Field";
 export interface IFormFileUpload extends IFormField {
     name?: string;
     emptyText?: string;
@@ -20,4 +19,7 @@ export interface IFormFileUpload extends IFormField {
     iconSize?: IconSize;
     size?: FileUploadSize;
     variant?: FileUploadVariant;
+}
+export declare class FileUpload extends FormField<IFormFileUpload> {
+    constructor(tag: string, options?: IFormFileUpload);
 }

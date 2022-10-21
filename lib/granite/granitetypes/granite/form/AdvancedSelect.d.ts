@@ -1,7 +1,7 @@
 import { GraniteNode } from "../../../GraniteNode";
 import { ICommonAttributes } from "../CommonAttributes";
 import { IRenderCondition } from "../RenderCondition";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/advancedselect";
+import { FormField } from "./Field";
 export interface IFormAdvancedSelect extends ICommonAttributes, IRenderCondition {
     name?: string;
     deleteHint?: boolean;
@@ -10,4 +10,7 @@ export interface IFormAdvancedSelect extends ICommonAttributes, IRenderCondition
     maximized?: boolean;
     toolbar?: GraniteNode | GraniteNode[];
     field?: GraniteNode | GraniteNode[];
+}
+export declare class AdvancedSelect extends FormField<IFormAdvancedSelect> {
+    constructor(tag: string, options?: IFormAdvancedSelect);
 }

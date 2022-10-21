@@ -1,5 +1,4 @@
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/switch";
+import { FormField, IFormField } from "./Field";
 export interface IFormSwitch extends IFormField {
     name?: string;
     deleteHint?: boolean;
@@ -11,4 +10,7 @@ export interface IFormSwitch extends IFormField {
     checked?: boolean;
     ignoreData?: boolean;
     wrapperClass?: string;
+}
+export declare class Switch extends FormField<IFormSwitch> {
+    constructor(tag: string, options?: IFormSwitch);
 }

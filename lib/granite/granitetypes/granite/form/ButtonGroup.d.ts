@@ -1,8 +1,7 @@
 import { IconSize } from "../../../../icons";
 import { ICommonAttributes } from "../CommonAttributes";
-import { IGraniteContainer } from "../GraniteContainer";
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/buttongroup";
+import { GraniteContainer, IGraniteContainer } from "../GraniteContainer";
+import { FormField, IFormField } from "./Field";
 declare type SelectionModes = "none" | "single" | "multiple";
 export interface IFormButtonGroup extends IFormField, IGraniteContainer {
     name?: string;
@@ -20,5 +19,11 @@ export interface IFormButtonGroupItem extends ICommonAttributes {
     hideText?: boolean;
     icon?: string;
     iconSize?: IconSize;
+}
+export declare class ButtonGroup extends FormField<IFormButtonGroup> {
+    constructor(tag: string, options?: IFormButtonGroup);
+}
+export declare class ButtonGroupItem extends GraniteContainer<IFormButtonGroupItem> {
+    constructor(tag: string, options?: IFormButtonGroupItem);
 }
 export {};

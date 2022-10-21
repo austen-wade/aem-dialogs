@@ -5,5 +5,7 @@ interface IContainer extends ICommonAttributes, IRenderCondition, IGraniteContai
     margin?: boolean;
     maximized?: boolean;
 }
-export declare function Container(tag: string, options?: IContainer): GraniteContainer<IContainer>;
+export declare class Container extends GraniteContainer<IContainer> {
+    constructor(tag: string, options?: IContainer);
+}
 export {};

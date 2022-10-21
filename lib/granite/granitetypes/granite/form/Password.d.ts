@@ -1,5 +1,4 @@
-import { IFormField } from "./Field";
-export declare const resourceType = "/libs/granite/ui/components/coral/foundation/form/password";
+import { FormField, IFormField } from "./Field";
 export interface IFormPassword extends IFormField {
     name?: string;
     emptyText?: string;
@@ -8,6 +7,8 @@ export interface IFormPassword extends IFormField {
     autocomplete?: string;
     autofocus?: boolean;
     retype?: string;
-    validation?: string;
-    multiple: any;
+    validation?: string[];
+}
+export declare class Password extends FormField<IFormPassword> {
+    constructor(tag: string, options?: IFormPassword);
 }

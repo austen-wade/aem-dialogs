@@ -1,6 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 import { ICommonAttributes } from "./CommonAttributes";
-import { IGraniteContainer } from "./GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "./GraniteContainer";
 import { IRenderCondition } from "./RenderCondition";
 import { Alignment, SelectionMode, SortMode, SortType } from "./LiteralTypes";
 export interface ITable extends ICommonAttributes, IRenderCondition, IGraniteContainer {
@@ -34,4 +34,10 @@ export interface ITableColumn {
     hidden?: boolean;
     sortable?: boolean;
     sortType?: SortType;
+}
+export declare class Table extends GraniteContainer<ITable> {
+    constructor(tag: string, options?: ITable);
+}
+export declare class TableColumn extends GraniteContainer<ITableColumn> {
+    constructor(tag: string, options?: ITableColumn);
 }

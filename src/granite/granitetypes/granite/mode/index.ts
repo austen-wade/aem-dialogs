@@ -1,2 +1,2 @@
-export { IModeForm } from "./Form";
-export { IModeSwitcher } from "./Switcher";
+export * from "./Form";
+export * from "./Switcher";

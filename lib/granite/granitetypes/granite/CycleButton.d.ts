@@ -1,5 +1,5 @@
 import { ICommonAttributes } from "./CommonAttributes";
-import { IGraniteContainer } from "./GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "./GraniteContainer";
 import { IRenderCondition } from "./RenderCondition";
 import { DisplayMode } from "./LiteralTypes";
 export interface ICycleButton extends ICommonAttributes, IRenderCondition, IGraniteContainer {
@@ -11,4 +11,10 @@ export interface ICycleButtonItem extends ICommonAttributes, IRenderCondition {
     text?: string;
     text_commentI18n?: string;
     icon?: string;
+}
+export declare class CycleButton extends GraniteContainer<ICycleButton> {
+    constructor(tag: string, options?: ICycleButton);
+}
+export declare class CycleButtonItem extends GraniteContainer<ICycleButtonItem> {
+    constructor(tag: string, options?: ICycleButtonItem);
 }

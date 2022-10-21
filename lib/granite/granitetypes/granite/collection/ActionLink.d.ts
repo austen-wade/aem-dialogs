@@ -3,6 +3,7 @@ import { GraniteNode } from "../../../GraniteNode";
 import { ICommonAttributes } from "../CommonAttributes";
 import { IRenderCondition } from "../RenderCondition";
 import { ActiveSelectionCount, RelScope } from "../LiteralTypes";
+import { GraniteContainer } from "../GraniteContainer";
 export interface ICollectionActionLink extends ICommonAttributes, IRenderCondition {
     target?: string;
     activeCount?: number;
@@ -24,4 +25,7 @@ export interface ICollectionActionLink extends ICommonAttributes, IRenderConditi
     trackingElement?: string;
     trackingWidgetName?: string;
     data?: GraniteNode | GraniteNode[];
+}
+export declare class CollectionActionLink extends GraniteContainer<ICollectionActionLink> {
+    constructor(tag: string, options?: ICollectionActionLink);
 }

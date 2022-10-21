@@ -8,6 +8,8 @@ interface IContainer extends ICommonAttributes, IRenderCondition, IGraniteContai
     maximized?: boolean;
 }
 
-export function Container(tag: string, options?: IContainer): GraniteContainer<IContainer> {
-    return new GraniteContainer<IContainer>(tag, options, ResourceType.CONTAINER);
+export class Container extends GraniteContainer<IContainer> {
+    constructor(tag: string, options?: IContainer) {
+        super(tag, options, ResourceType.CONTAINER);
+    }
 }

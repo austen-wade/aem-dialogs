@@ -1,6 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 import { ICommonAttributes } from "./CommonAttributes";
-import { IGraniteContainer } from "./GraniteContainer";
+import { GraniteContainer, IGraniteContainer } from "./GraniteContainer";
 import { IRenderCondition } from "./RenderCondition";
 import { MasonryLayout } from "./LiteralTypes";
 export interface IMasonry extends ICommonAttributes, IRenderCondition, IGraniteContainer {
@@ -23,4 +23,7 @@ export interface IMasonry extends ICommonAttributes, IRenderCondition, IGraniteC
     renderItemElement?: boolean;
     skipEmptyItem?: boolean;
     emptyitem?: GraniteNode | GraniteNode[];
+}
+export declare class Masonry extends GraniteContainer<IMasonry> {
+    constructor(tag: string, options?: IMasonry);
 }

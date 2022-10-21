@@ -12,25 +12,18 @@ export interface IDialog extends ICommonAttributes, IRenderCondition, IGraniteCo
     footer?: GraniteNode | GraniteNode[];
 }
 
-interface IDialogFooterItemParentconfig {
+export interface IDialogFooterItemParentconfig {
     close?: boolean;
 }
 
-/* 
-cannot be in this file?
 export class Dialog extends GraniteContainer<IDialog> {
     constructor(tag: string, options: IDialog) {
         super(tag, options, ResourceType.DIALOG);
     }
-} */
-/* 
-export function Dialog(tag: string, options: IDialog): GraniteContainer<IDialog> {
-    return new GraniteContainer<IDialog>(tag, options, ResourceType.DIALOG);
-} */
+}
 
-export function DialogFooterItemParentconfig(
-    tag = "parentConfig",
-    options?: IDialogFooterItemParentconfig,
-): GraniteContainer<IDialogFooterItemParentconfig> {
-    return new GraniteContainer<IDialogFooterItemParentconfig>(tag, options);
+export class DialogFooterItemParentconfig extends GraniteContainer<IDialogFooterItemParentconfig> {
+    constructor(tag = "parentConfig", options?: IDialogFooterItemParentconfig) {
+        super(tag, options);
+    }
 }

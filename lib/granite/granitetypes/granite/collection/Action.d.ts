@@ -1,6 +1,7 @@
 import { IconSize } from "../../../../icons";
 import { GraniteNode } from "../../../GraniteNode";
 import { ICommonAttributes } from "../CommonAttributes";
+import { GraniteContainer } from "../GraniteContainer";
 import { ActiveSelectionCount, RelScope, ActionBarSize, ActionVariant } from "../LiteralTypes";
 import { IRenderCondition } from "../RenderCondition";
 export interface ICollectionAction extends ICommonAttributes, IRenderCondition {
@@ -26,4 +27,7 @@ export interface ICollectionAction extends ICommonAttributes, IRenderCondition {
     trackingElement?: string;
     trackingWidgetName?: string;
     data?: GraniteNode | GraniteNode[];
+}
+export declare class CollectionAction extends GraniteContainer<ICollectionAction> {
+    constructor(tag: string, options?: ICollectionAction);
 }
