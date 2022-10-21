@@ -1,12 +1,11 @@
 import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "./CommonAttributes";
-import { GraniteContainer } from "./GraniteContainer";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { GraniteContainer, IGraniteContainer } from "./GraniteContainer";
+import { IRenderCondition } from "./RenderCondition";
 import { DialogVariant } from "./LiteralTypes";
+import { ResourceType } from "../../../types";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/dialog";
-
-export interface Dialog extends CommonAttributes, RenderCondition, GraniteContainer {
+interface IDialog extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     "jcr:title": string;
 
     closable?: boolean; // ='true'
@@ -15,6 +14,18 @@ export interface Dialog extends CommonAttributes, RenderCondition, GraniteContai
 
     footer?: GraniteNode | GraniteNode[];
 }
-export interface DialogFooterItemParentconfig {
+
+interface IDialogFooterItemParentconfig {
     close?: boolean;
+}
+
+export function Dialog(tag: string, options: IDialog): GraniteContainer<IDialog> {
+    return new GraniteContainer<IDialog>(tag, options, ResourceType.DIALOG);
+}
+
+export function DialogFooterItemParentconfig(
+    tag = "parentConfig",
+    options?: IDialogFooterItemParentconfig,
+): GraniteContainer<IDialogFooterItemParentconfig> {
+    return new GraniteContainer<IDialogFooterItemParentconfig>(tag, options);
 }

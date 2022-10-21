@@ -1,9 +1,9 @@
 import { Filter } from "../LiteralTypes";
-import { FormField } from "./Field";
+import { IFormField } from "./Field";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/pathfield";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/form/pathfield";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
-export interface FormTextField extends FormField {
+export interface IFormPathField extends IFormField {
     name?: string;
 
     emptyText?: string;

@@ -1,6 +1,5 @@
-import { CommonAttributes } from "../../CommonAttributes";
+import { ICommonAttributes } from "../../CommonAttributes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/responses/redirect";
-export interface FormResponsesRedirect extends CommonAttributes {
+export interface IFormResponsesRedirect extends ICommonAttributes {
     href?: string;
 }

@@ -1,7 +1,6 @@
-import { RenderCondition } from "./RenderCondition";
+import { IRenderCondition } from "./RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/includeclientlibs";
-export interface IncludeClientlibs extends RenderCondition {
+export interface IIncludeClientlibs extends IRenderCondition {
     categories?: string[];
     js?: string[];
     css?: string[];

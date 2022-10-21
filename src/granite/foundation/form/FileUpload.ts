@@ -1,6 +1,7 @@
-import { GraniteIcon, IconSize, ButtonSize, ButtonVariants } from "../../../icons";
+import { GraniteIcon, IconSize } from "../../../icons";
 import { ResourceType } from "../../../types";
-import { Field, FieldOptions } from "./Field";
+import { ButtonSize, ButtonVariant } from "../../granitetypes/granite";
+import { FieldOptions, Field } from "./Field";
 
 export interface FileUploadOptions extends FieldOptions {
     emptyText?: string;
@@ -15,7 +16,7 @@ export interface FileUploadOptions extends FieldOptions {
     icon?: GraniteIcon;
     iconSize?: IconSize;
     size?: ButtonSize;
-    variant?: ButtonVariants;
+    variant?: ButtonVariant;
     allowUpload?: boolean;
     fileNameParameter?: string;
     fileReferenceParameter?: string;

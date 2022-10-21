@@ -1,7 +1,5 @@
-import { CommonAttributes } from "../../CommonAttributes";
+import { ICommonAttributes } from "../../CommonAttributes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/responses/reload";
-
-export interface FormResponsesReload extends CommonAttributes {
+export interface IFormResponsesReload extends ICommonAttributes {
     "jcr:title"?: string;
 }

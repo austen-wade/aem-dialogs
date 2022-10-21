@@ -1,3 +1,5 @@
+import { Prop } from "./types";
+
 export function formatXml(xml: string) {
     let formatted = "";
     const reg = /(>)(<)(\/*)/g;
@@ -44,4 +46,8 @@ export function aembool(b: boolean): string {
     }
 
     return "{Boolean}false";
+}
+
+export function prop(field: string, value: string): Prop {
+    return { field, value };
 }

@@ -1,6 +1,6 @@
-export const resourceType = " /libs/granite/ui/components/coral/foundation/querybuilder/datasource";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/querybuilder/datasource";
 // ?:datasource:
-export interface QueryBuilderDatasource {
+export interface IQueryBuilderDatasource {
     itemResourceType: string;
 
     offset?: number; // ='0'

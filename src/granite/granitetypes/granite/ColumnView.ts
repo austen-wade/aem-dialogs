@@ -1,9 +1,8 @@
-import { CommonAttributes } from "./CommonAttributes";
-import { GraniteContainer } from "./GraniteContainer";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IGraniteContainer } from "./GraniteContainer";
+import { IRenderCondition } from "./RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/columnview";
-export interface ColumnView extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface IColumnView extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     selectionMode?: boolean; // ='true'
 
     selectionCount?: string; // ='multiple'

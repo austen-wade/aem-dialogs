@@ -1,13 +1,11 @@
-import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "../granite/CommonAttributes";
-import { GraniteContainer } from "../granite/GraniteContainer";
-import { RenderCondition } from "../granite/RenderCondition";
+import { GraniteNode } from "../../../GraniteNode";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IGraniteContainer } from "../GraniteContainer";
+import { IRenderCondition } from "../RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/nestedcheckboxlist";
-
-export interface FormNestedCheckboxList extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface IFormNestedCheckboxList extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     disconnected?: boolean;
 }
-export interface FormNestedCheckboxListSublist {
+export interface IFormNestedCheckboxListSublist {
     sublist?: GraniteNode | GraniteNode[];
 }

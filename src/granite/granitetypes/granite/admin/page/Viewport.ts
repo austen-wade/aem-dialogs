@@ -1,1 +1,1 @@
-export const resourceType = " /libs/granite/ui/components/coral/foundation/admin/page/viewport";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/admin/page/viewport";

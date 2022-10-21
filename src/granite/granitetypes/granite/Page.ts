@@ -1,8 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/page";
-
-export interface Page {
+export interface IPage {
     consoleId?: string;
 
     "jcr:title"?: string;

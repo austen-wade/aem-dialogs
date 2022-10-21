@@ -1,13 +1,12 @@
 import { GraniteNode } from "../../GraniteNode";
 
-export interface CommonAttributes {
-    id?: string;
-    rel?: string;
-    class?: string;
-    title?: string;
-    hidden?: boolean;
-    itemscope?: boolean;
-    itemtype?: string;
-    itemprop?: string;
-    data?: GraniteNode | GraniteNode[];
+export interface ICommonAttributes {
+    "granite:id"?: string;
+    "granite:rel"?: string;
+    "granite:class"?: string;
+    "granite:title"?: string;
+    "granite:hidden"?: boolean;
+    "granite:itemscope"?: boolean;
+    "granite:itemtype"?: string;
+    "granite:itemprop"?: string;
 }

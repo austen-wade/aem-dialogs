@@ -1,10 +1,8 @@
-import { CommonAttributes } from "../CommonAttributes";
-import { RenderCondition } from "../RenderCondition";
+import { ICommonAttributes } from "../CommonAttributes";
 import { TooltipPosition } from "../LiteralTypes";
+import { IRenderCondition } from "../RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/field";
-
-export interface FormField extends CommonAttributes, RenderCondition {
+export interface IFormField extends ICommonAttributes, IRenderCondition {
     fieldLabel?: string;
 
     fieldLabel_commentI18n?: string;

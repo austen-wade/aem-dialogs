@@ -1,10 +1,8 @@
-import { CommonAttributes } from "./CommonAttributes";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IRenderCondition } from "./RenderCondition";
 import { HeadingLevel } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/heading";
-
-export interface Heading extends CommonAttributes, RenderCondition {
+export interface IHeading extends ICommonAttributes, IRenderCondition {
     level?: HeadingLevel;
 
     text?: string;

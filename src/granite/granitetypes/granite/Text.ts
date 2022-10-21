@@ -1,7 +1,6 @@
-import { CommonAttributes } from "./CommonAttributes";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IRenderCondition } from "./RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/text";
-export interface Text extends CommonAttributes, RenderCondition {
+export interface IText extends ICommonAttributes, IRenderCondition {
     text?: string;
 }

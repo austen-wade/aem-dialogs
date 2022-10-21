@@ -1,12 +1,10 @@
-import { IconSize } from "../../../icons";
-import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "../granite/CommonAttributes";
-import { RenderCondition } from "../granite/RenderCondition";
-import { ActionBarSize, ActionVariant, ActiveSelectionCount, RelScope } from "./LiteralTypes";
+import { IconSize } from "../../../../icons";
+import { GraniteNode } from "../../../GraniteNode";
+import { ICommonAttributes } from "../CommonAttributes";
+import { ActiveSelectionCount, RelScope, ActionBarSize, ActionVariant } from "../LiteralTypes";
+import { IRenderCondition } from "../RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/collection/action";
-
-export interface CollectionAction extends CommonAttributes, RenderCondition {
+export interface ICollectionAction extends ICommonAttributes, IRenderCondition {
     target?: string;
 
     activeCount?: number; // = ">=0"

@@ -1,11 +1,10 @@
 import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "./CommonAttributes";
-import { GraniteContainer } from "./GraniteContainer";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IGraniteContainer } from "./GraniteContainer";
+import { IRenderCondition } from "./RenderCondition";
 import { Alignment, SelectionMode, SortMode, SortType } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/table";
-export interface Table extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface ITable extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     selectionMode?: SelectionMode;
 
     selectionCount?: string; // ='multiple'
@@ -43,7 +42,7 @@ export interface Table extends CommonAttributes, RenderCondition, GraniteContain
     emptyrow?: GraniteNode | GraniteNode[];
 }
 
-export interface TableColumn {
+export interface ITableColumn {
     name?: string;
 
     select?: boolean;

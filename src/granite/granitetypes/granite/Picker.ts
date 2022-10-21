@@ -1,7 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/picker";
-export interface Picker {
+export interface IPicker {
     "jcr:title"?: string;
 
     modeGroup?: string;
@@ -20,7 +19,7 @@ export interface Picker {
 
     actions?: GraniteNode | GraniteNode[];
 }
-export interface PickerSearch {
+export interface IPickerSearch {
     name?: string;
 
     targetCollection?: string;
@@ -29,6 +28,6 @@ export interface PickerSearch {
 
     views: GraniteNode | GraniteNode[];
 }
-export interface PickerActions {
+export interface IPickerActions {
     selection?: GraniteNode | GraniteNode[];
 }

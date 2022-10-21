@@ -1,5 +1,4 @@
-export const resourceType = " /libs/granite/ui/components/coral/foundation/meta";
-export interface Meta {
+export interface IMeta {
     name?: string;
 
     content?: string;

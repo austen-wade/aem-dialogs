@@ -1,12 +1,10 @@
 import { IconSize } from "../../../../icons";
 import { GraniteNode } from "../../../GraniteNode";
-import { CommonAttributes } from "../CommonAttributes";
-import { RenderCondition } from "../RenderCondition";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IRenderCondition } from "../RenderCondition";
 import { ActiveSelectionCount, RelScope } from "../LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/collection/actionlink";
-
-export interface CollectionActionLink extends CommonAttributes, RenderCondition {
+export interface ICollectionActionLink extends ICommonAttributes, IRenderCondition {
     target?: string;
 
     activeCount?: number; // = ">=0"

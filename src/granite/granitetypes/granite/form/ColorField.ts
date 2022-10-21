@@ -1,7 +1,6 @@
-import { FormField } from "./Field";
+import { IFormField } from "./Field";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/colorfield";
-export interface FormColorField extends FormField {
+export interface IFormColorField extends IFormField {
     name?: string;
 
     value?: string;
@@ -24,6 +23,6 @@ export interface FormColorField extends FormField {
 
     validation?: string[];
 }
-export interface FormColorFieldItem {
+export interface IFormColorFieldItem {
     value?: string;
 }

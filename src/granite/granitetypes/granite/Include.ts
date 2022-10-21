@@ -1,5 +1,4 @@
-export const resourceType = " /libs/granite/ui/components/coral/foundation/include";
-export interface Include {
+export interface IInclude {
     path?: string;
 
     resourceType?: string;

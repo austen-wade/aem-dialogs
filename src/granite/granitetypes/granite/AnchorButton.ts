@@ -1,11 +1,9 @@
 import { IconSize } from "../../../icons";
-import { CommonAttributes } from "./CommonAttributes";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IRenderCondition } from "./RenderCondition";
 import { ActionBarSize, AnchorVariant, LinkCheckerSkip } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/anchorbutton";
-
-export interface AnchorButton extends CommonAttributes, RenderCondition {
+export interface IAnchorButton extends ICommonAttributes, IRenderCondition {
     href?: string;
 
     href_i18n?: string;

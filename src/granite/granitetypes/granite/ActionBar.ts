@@ -1,11 +1,9 @@
 import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "./CommonAttributes";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IRenderCondition } from "./RenderCondition";
 import { ActionBarSize } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/actionbar";
-
-export interface ActionBar extends CommonAttributes, RenderCondition {
+export interface IActionBar extends ICommonAttributes, IRenderCondition {
     margin?: boolean;
 
     size?: ActionBarSize;

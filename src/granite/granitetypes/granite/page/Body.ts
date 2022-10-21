@@ -1,6 +1,4 @@
-import { CommonAttributes } from "../CommonAttributes";
-import { GraniteContainer } from "../GraniteContainer";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IGraniteContainer } from "../GraniteContainer";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/page/body";
-
-export interface PageBody extends CommonAttributes, GraniteContainer {}
+export interface IPageBody extends ICommonAttributes, IGraniteContainer {}

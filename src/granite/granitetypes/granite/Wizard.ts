@@ -1,11 +1,9 @@
 import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "./CommonAttributes";
-import { GraniteContainer } from "./GraniteContainer";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IGraniteContainer } from "./GraniteContainer";
+import { IRenderCondition } from "./RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/wizard";
-
-export interface Wizard extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface IWizard extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     "jcr:title": string;
 
     cancelHref?: string;
@@ -14,13 +12,13 @@ export interface Wizard extends CommonAttributes, RenderCondition, GraniteContai
 
     trackingElement?: string;
 }
-export interface WizardStep {
+export interface IWizardStep {
     "jcr:title": string;
 
     parentConfig?: GraniteNode | GraniteNode[];
 }
 
-export interface WizardStepParentconfig {
+export interface IWizardStepParentconfig {
     validation?: boolean; // ='true'
 
     prev?: GraniteNode | GraniteNode[];

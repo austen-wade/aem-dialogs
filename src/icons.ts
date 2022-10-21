@@ -771,7 +771,3 @@ export type GraniteIcon =
     | "zoomIn";
 
 export type IconSize = "XS" | "S" | "M" | "L";
-
-export type ButtonSize = "M" | "L";
-
-export type ButtonVariants = "primary" | "warning" | "quiet" | "minimal" | "actionBar";

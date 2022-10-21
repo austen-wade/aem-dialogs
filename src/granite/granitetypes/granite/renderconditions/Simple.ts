@@ -1,4 +1,3 @@
-export const resourceType = " /libs/granite/ui/components/coral/foundation/renderconditions/simple";
-export interface RenderConditionsSimple {
+export interface IRenderConditionsSimple {
     expression?: boolean; // =true
 }

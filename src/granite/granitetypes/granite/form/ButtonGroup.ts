@@ -1,13 +1,13 @@
 import { IconSize } from "../../../../icons";
-import { CommonAttributes } from "../CommonAttributes";
-import { GraniteContainer } from "../GraniteContainer";
-import { FormField } from "./Field";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IGraniteContainer } from "../GraniteContainer";
+import { IFormField } from "./Field";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/buttongroup";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/form/buttongroup";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 
 type SelectionModes = "none" | "single" | "multiple";
-export interface FormButtonGroup extends FormField, GraniteContainer {
+export interface IFormButtonGroup extends IFormField, IGraniteContainer {
     name?: string;
 
     selectionMode: SelectionModes; // = 'none'
@@ -20,7 +20,7 @@ export interface FormButtonGroup extends FormField, GraniteContainer {
 
     ignoreData?: boolean;
 }
-export interface FormButtonGroupItem extends CommonAttributes {
+export interface IFormButtonGroupItem extends ICommonAttributes {
     value?: string;
 
     disabled?: boolean;

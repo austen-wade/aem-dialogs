@@ -1,5 +1,5 @@
 import { GraniteNode } from "../../GraniteNode";
 
-export interface RenderCondition {
+export interface IRenderCondition {
     renderCondition?: GraniteNode;
 }

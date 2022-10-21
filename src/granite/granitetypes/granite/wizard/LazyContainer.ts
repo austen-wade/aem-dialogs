@@ -1,8 +1,7 @@
-import { CommonAttributes } from "../CommonAttributes";
-import { RenderCondition } from "../RenderCondition";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IRenderCondition } from "../RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/wizard/lazycontainer";
-export interface WizardLazyContainer extends CommonAttributes, RenderCondition {
+export interface IWizardLazyContainer extends ICommonAttributes, IRenderCondition {
     src?: string;
 
     margin?: boolean;

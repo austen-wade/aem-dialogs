@@ -1,11 +1,11 @@
-import { CommonAttributes } from "../CommonAttributes";
-import { RenderCondition } from "../RenderCondition";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IRenderCondition } from "../RenderCondition";
 import { TooltipPosition } from "../LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/checkbox";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/form/checkbox";
 //   :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 
-export interface FormCheckbox extends CommonAttributes, RenderCondition {
+export interface IFormCheckbox extends ICommonAttributes, IRenderCondition {
     name?: string;
 
     deleteHint?: boolean; // =true

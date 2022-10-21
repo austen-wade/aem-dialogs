@@ -1,16 +1,14 @@
-import { CommonAttributes } from "./CommonAttributes";
-import { GraniteContainer } from "./GraniteContainer";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IGraniteContainer } from "./GraniteContainer";
+import { IRenderCondition } from "./RenderCondition";
 import { DisplayMode } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/cyclebutton";
-
-export interface CycleButton extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface ICycleButton extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     displayMode?: DisplayMode;
 
     variant?: string; // < 'actionBar'
 }
-export interface CycleButtonItem extends CommonAttributes, RenderCondition {
+export interface ICycleButtonItem extends ICommonAttributes, IRenderCondition {
     selected?: boolean;
 
     text?: string;

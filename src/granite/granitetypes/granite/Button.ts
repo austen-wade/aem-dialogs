@@ -1,11 +1,9 @@
 import { IconSize } from "../../../icons";
-import { CommonAttributes } from "./CommonAttributes";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IRenderCondition } from "./RenderCondition";
 import { Autocomplete, ButtonSize, ButtonType, ButtonVariant } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/button";
-
-export interface Button extends CommonAttributes, RenderCondition {
+export interface IButton extends ICommonAttributes, IRenderCondition {
     type?: ButtonType;
 
     disabled?: boolean;

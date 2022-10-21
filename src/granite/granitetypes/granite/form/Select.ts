@@ -1,12 +1,12 @@
-import { CommonAttributes } from "../CommonAttributes";
-import { GraniteContainer } from "../GraniteContainer";
-import { RenderCondition } from "../RenderCondition";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IGraniteContainer } from "../GraniteContainer";
+import { IRenderCondition } from "../RenderCondition";
 import { SelectVariant, StatusVariant } from "../LiteralTypes";
-import { FormField } from "./Field";
+import { IFormField } from "./Field";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/select";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/form/select";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
-export interface FormSelect extends FormField, GraniteContainer {
+export interface IFormSelect extends IFormField, IGraniteContainer {
     name?: string;
 
     emptyText?: string;
@@ -31,7 +31,7 @@ export interface FormSelect extends FormField, GraniteContainer {
 
     forceIgnoreFreshness?: boolean;
 }
-export interface FormSelectItem extends CommonAttributes, RenderCondition {
+export interface IFormSelectItem extends ICommonAttributes, IRenderCondition {
     value: string;
 
     disabled?: boolean;

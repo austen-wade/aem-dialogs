@@ -1,11 +1,10 @@
 import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "./CommonAttributes";
-import { GraniteContainer } from "./GraniteContainer";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IGraniteContainer } from "./GraniteContainer";
+import { IRenderCondition } from "./RenderCondition";
 import { Orientation, TabsSize } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/tabs";
-export interface Tabs extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface ITabs extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     orientation?: Orientation;
     size?: TabsSize;
     margin?: boolean;
@@ -14,13 +13,13 @@ export interface Tabs extends CommonAttributes, RenderCondition, GraniteContaine
     trackingWidgetName?: string;
 }
 
-export interface TabsItem {
+export interface ITabsItem {
     "jcr:title": string;
     trackingElement?: string;
     parentConfig?: GraniteNode | GraniteNode[];
 }
 
-export interface TabsItemParentconfig {
+export interface ITabsItemParentconfig {
     active?: boolean;
     icon?: string;
 }

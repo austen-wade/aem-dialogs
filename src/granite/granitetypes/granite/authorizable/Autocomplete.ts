@@ -1,9 +1,9 @@
-import { FormField } from "../form/Field";
+import { IFormField } from "../form";
 import { ImpersonableUserFilter, Selector, ServiceUserFilter, ValueType } from "../LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/authorizable/autocomplete";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/authorizable/autocomplete";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
-export interface AuthorizableAutocomplete extends FormField {
+export interface IAuthorizableAutocomplete extends IFormField {
     name?: string;
 
     emptyText?: string;

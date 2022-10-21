@@ -1,4 +1,4 @@
-import { RichText } from "../granite/form";
+// import { RichText } from "../granite/form";
 import { Prop } from "../types";
 import { aembool, getName } from "../utils";
 
@@ -93,9 +93,9 @@ export class AemNode {
     }
 
     xml(isRoot?: boolean): string {
-        if (this instanceof RichText) {
-            this.child(this.generateConfig());
-        }
+        // if (this instanceof RichText) {
+        //     this.child(this.generateConfig());
+        // }
 
         return this.renderXmlTree(this.tag, this.props, this.children, isRoot);
     }

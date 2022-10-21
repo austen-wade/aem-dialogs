@@ -1,8 +1,8 @@
-import { FormField } from "./Field";
+import { IFormField } from "./Field";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/switch";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/form/switch";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
-export interface FormSwitch extends FormField {
+export interface IFormSwitch extends IFormField {
     name?: string;
 
     deleteHint?: boolean; // =true

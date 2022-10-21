@@ -1,11 +1,9 @@
-import { CommonAttributes } from "../CommonAttributes";
-import { GraniteContainer } from "../GraniteContainer";
-import { RenderCondition } from "../RenderCondition";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IGraniteContainer } from "../GraniteContainer";
 import { AlignmentStyle } from "../LiteralTypes";
+import { IRenderCondition } from "../RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/authorizable/preferencesform";
-
-export interface AuthorizablePreferencesForm extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface IAuthorizablePreferencesForm extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     enctype?: string;
 
     target?: string;

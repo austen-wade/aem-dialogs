@@ -1,10 +1,8 @@
 import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "./CommonAttributes";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IRenderCondition } from "./RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/panel";
-
-export interface Panel extends CommonAttributes, RenderCondition {
+export interface IPanel extends ICommonAttributes, IRenderCondition {
     margin?: boolean;
 
     header?: GraniteNode | GraniteNode[];
@@ -15,6 +13,6 @@ export interface Panel extends CommonAttributes, RenderCondition {
 
     footer?: GraniteNode | GraniteNode[];
 }
-export interface PanelRailParentconfig {
+export interface IPanelRailParentconfig {
     active?: boolean;
 }

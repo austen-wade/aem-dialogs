@@ -1,9 +1,9 @@
-import { FormField } from "./Field";
-import { DatePickerType } from "./LiteralTypes";
+import { DatePickerType } from "../LiteralTypes";
+import { IFormField } from "./Field";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/form/datepicker";
+export const resourceType = "/libs/granite/ui/components/coral/foundation/form/datepicker";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
-export interface FormDatePicker extends FormField {
+export interface IFormDatePicker extends IFormField {
     name?: string;
 
     typeHint?: string; // ='Date'

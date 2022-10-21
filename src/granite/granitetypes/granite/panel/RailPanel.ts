@@ -1,9 +1,8 @@
-import { CommonAttributes } from "../CommonAttributes";
-import { GraniteContainer } from "../GraniteContainer";
-import { RenderCondition } from "../RenderCondition";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IGraniteContainer } from "../GraniteContainer";
+import { IRenderCondition } from "../RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/panel/railpanel";
-export interface PanelRailPanel extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface IPanelRailPanel extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     src?: string;
 
     active?: boolean;

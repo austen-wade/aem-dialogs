@@ -1,9 +1,8 @@
-import { CommonAttributes } from "../CommonAttributes";
-import { GraniteContainer } from "../GraniteContainer";
-import { RenderCondition } from "../RenderCondition";
+import { ICommonAttributes } from "../CommonAttributes";
+import { IGraniteContainer } from "../GraniteContainer";
+import { IRenderCondition } from "../RenderCondition";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/mode/switcher";
-export interface ModeSwitcher extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface IModeSwitcher extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     active?: string;
 
     group?: string;

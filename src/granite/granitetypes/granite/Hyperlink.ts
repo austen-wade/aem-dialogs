@@ -1,11 +1,9 @@
 import { IconSize } from "../../../icons";
-import { CommonAttributes } from "./CommonAttributes";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IRenderCondition } from "./RenderCondition";
 import { LinkCheckerSkip } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/hyperlink";
-
-export interface Hyperlink extends CommonAttributes, RenderCondition {
+export interface IHyperlink extends ICommonAttributes, IRenderCondition {
     href?: string;
 
     href_i18n?: string;

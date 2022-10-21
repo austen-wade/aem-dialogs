@@ -1,10 +1,8 @@
-import { CommonAttributes } from "./CommonAttributes";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IRenderCondition } from "./RenderCondition";
 import { AlertSize, StatusVariant } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/alert";
-
-export interface Alert extends CommonAttributes, RenderCondition {
+export interface IAlert extends ICommonAttributes, IRenderCondition {
     variant?: StatusVariant;
 
     size?: AlertSize;

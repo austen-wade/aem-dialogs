@@ -1,12 +1,10 @@
 import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "./CommonAttributes";
-import { GraniteContainer } from "./GraniteContainer";
-import { RenderCondition } from "./RenderCondition";
+import { ICommonAttributes } from "./CommonAttributes";
+import { IGraniteContainer } from "./GraniteContainer";
+import { IRenderCondition } from "./RenderCondition";
 import { AccordionVariant } from "./LiteralTypes";
 
-export const resourceType = " /libs/granite/ui/components/coral/foundation/accordion";
-
-export interface Accordion extends CommonAttributes, RenderCondition, GraniteContainer {
+export interface IAccordion extends ICommonAttributes, IRenderCondition, IGraniteContainer {
     multiple?: boolean;
 
     variant?: AccordionVariant;
@@ -14,13 +12,13 @@ export interface Accordion extends CommonAttributes, RenderCondition, GraniteCon
     margin?: boolean;
 }
 
-export interface AccordionItem {
+export interface IAccordionItem {
     "jcr:title": string;
 
     parentConfig?: GraniteNode | GraniteNode[];
 }
 
-export interface AccordionItemParentconfig {
+export interface IAccordionItemParentconfig {
     active?: boolean;
 
     disabled?: boolean;
