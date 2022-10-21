@@ -1,4 +1,4 @@
-export * from "./granite/granitetypes/granite/index";
+export * from "./granite";
 export * from "./base/AemNode";
 export * from "./generate";
 export * from "./icons";

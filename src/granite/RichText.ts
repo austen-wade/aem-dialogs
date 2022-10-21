@@ -2,7 +2,6 @@ import { AemNode } from "../base/AemNode";
 import { ResourceType } from "../types";
 import { IFormField } from "./form";
 import { GraniteContainer } from "./GraniteContainer";
-import { GraniteNode } from "./GraniteNode";
 import { RTE_CONFIGS } from "./rteDefaults";
 
 export interface RTEChar {
