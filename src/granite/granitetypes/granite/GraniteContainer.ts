@@ -1,6 +1,7 @@
+import { ResourceType } from "../../../types";
 import { GraniteNode } from "../../GraniteNode";
 import { Container } from "./Container";
-import { Dialog } from "./Dialog";
+import { IDialog } from "./Dialog";
 
 export type IGraniteContainer = Record<any, any>;
 
@@ -20,8 +21,14 @@ export class GraniteContainer<T> extends GraniteNode {
     }
 }
 
-const graniteNode = Dialog("dialog", {
+class Dialog extends GraniteContainer<IDialog> {
+    constructor(tag: string, options: IDialog) {
+        super(tag, options, ResourceType.DIALOG);
+    }
+}
+
+const graniteNode = new Dialog("dialog", {
     "jcr:title": "Properties",
-}).child(Container("container", { margin: true }));
+});
 
 console.log("out", graniteNode.xml());
