@@ -1,3 +1,8 @@
+import { ICommonAttributes } from "../CommonAttributes";
+import { GraniteContainer } from "../GraniteContainer";
+import { TooltipPosition } from "../LiteralTypes";
+import { IRenderCondition } from "../RenderCondition";
+
 export interface IFormField extends ICommonAttributes, IRenderCondition {
     fieldLabel?: string;
     fieldLabel_commentI18n?: string;

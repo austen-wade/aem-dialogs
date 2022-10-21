@@ -10,7 +10,7 @@ export interface IFormNumberField extends IFormField {
     validation?: string[];
     min?: number;
     max?: number;
-    step?: string; // ="1"
+    step?: number; // ="1"
 }
 
 export class NumberField extends FormField<IFormNumberField> {

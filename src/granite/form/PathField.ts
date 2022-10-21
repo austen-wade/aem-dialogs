@@ -14,7 +14,7 @@ export interface IFormPathField extends IFormField {
     suggestionSrc?: string;
     pickerSrc?: string;
     rootPath: string; // ='/'
-    filter: Filter;
+    filter?: Filter;
 }
 
 export class PathField extends FormField<IFormPathField> {

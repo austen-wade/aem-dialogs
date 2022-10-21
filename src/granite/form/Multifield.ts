@@ -8,7 +8,7 @@ export interface IFormMultifield extends IFormField {
     typeHint?: string;
     required?: boolean;
     validation?: string[];
-    field: GraniteNode;
+    field?: GraniteNode;
 }
 
 export class Multifield extends FormField<IFormMultifield> {
