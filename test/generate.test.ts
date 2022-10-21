@@ -57,7 +57,7 @@ const field = new FormField("FormField", {
 
 const fileUpload = new FileUpload("FileUpload", {});
 
-const fixedColumns = new FixedColumns("Fixed Columns", {
+const fixedColumns = new FixedColumns("FixedColumns", {
     margin: true,
     maximized: false,
 });
