@@ -1,8 +1,8 @@
-import { IconSize } from "../../../icons";
-import { GraniteNode } from "../../GraniteNode";
-import { CommonAttributes } from "../granite/CommonAttributes";
-import { RenderCondition } from "../granite/RenderCondition";
-import { ActiveSelectionCount, RelScope } from "./LiteralTypes";
+import { IconSize } from "../../../../icons";
+import { GraniteNode } from "../../../GraniteNode";
+import { CommonAttributes } from "../../granite/CommonAttributes";
+import { RenderCondition } from "../../granite/RenderCondition";
+import { ActiveSelectionCount, RelScope } from "../LiteralTypes";
 
 export const resourceType = " /libs/granite/ui/components/coral/foundation/collection/actionlink";
 
