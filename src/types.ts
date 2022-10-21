@@ -1,15 +1,3 @@
-import {
-    Checkbox,
-    DatePicker,
-    FileUpload,
-    Multifield,
-    NumberField,
-    PathField,
-    RadioGroup,
-    Select,
-} from "./granite/foundation/form";
-import { AdvancedSelect, Textarea } from "./granite/granitetypes/granite";
-
 export enum ResourceType {
     TEXTFIELD = "granite/ui/components/coral/foundation/form/textfield",
     CONTAINER = "granite/ui/components/coral/foundation/container",
