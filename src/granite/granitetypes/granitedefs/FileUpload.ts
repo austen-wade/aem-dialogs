@@ -1,6 +1,8 @@
+import { IconSize } from "../../../icons";
 import { FormField } from "./Field";
+import { FileUploadSize, FileUploadVariant } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/fileupload";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/fileupload";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 export interface FormFileUpload extends FormField {
     name?: string;
@@ -31,9 +33,9 @@ export interface FormFileUpload extends FormField {
 
     icon?: string;
 
-    iconSize?: string; // < 'XS', 'S', 'M', 'L'
+    iconSize?: IconSize;
 
-    size?: string; // < 'M', 'L'
+    size?: FileUploadSize;
 
-    variant?: string; // < 'primary', 'warning', 'quiet', 'minimal', 'actionBar'
+    variant?: FileUploadVariant;
 }

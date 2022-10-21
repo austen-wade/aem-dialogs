@@ -2,7 +2,7 @@ import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { RenderCondition } from "../granite/RenderCondition";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/columnview";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/columnview";
 export interface ColumnView extends CommonAttributes, RenderCondition, GraniteContainer {
     selectionMode?: boolean; // ='true'
 

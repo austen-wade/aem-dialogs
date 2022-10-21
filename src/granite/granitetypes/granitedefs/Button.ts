@@ -1,14 +1,16 @@
+import { IconSize } from "../../../icons";
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { RenderCondition } from "../granite/RenderCondition";
+import { Autocomplete, ButtonSize, ButtonType, ButtonVariant } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/button";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/button";
 
 export interface Button extends CommonAttributes, RenderCondition {
-    type?: string; // < 'button', 'submit', 'reset'
+    type?: ButtonType;
 
     disabled?: boolean;
 
-    autocomplete?: string; // < 'on', 'off'
+    autocomplete?: Autocomplete;
 
     formId?: string;
 
@@ -22,13 +24,13 @@ export interface Button extends CommonAttributes, RenderCondition {
 
     icon?: string;
 
-    iconSize?: string; // < 'XS', 'S', 'M', 'L'
+    iconSize?: IconSize;
 
-    size?: string; // < 'M', 'L'
+    size?: ButtonSize;
 
     block?: boolean;
 
-    variant?: string; // < 'primary', 'warning', 'quiet', 'minimal', 'actionBar'
+    variant?: ButtonVariant;
 
     command?: string;
 

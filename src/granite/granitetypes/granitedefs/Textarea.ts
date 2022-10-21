@@ -1,7 +1,7 @@
 import { FormField } from "./Field";
 import { Resize } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/textarea";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/textarea";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 export interface FormTextarea extends FormField {
     name?: string;

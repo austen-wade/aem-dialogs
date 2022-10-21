@@ -1,6 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/picker";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/picker";
 export interface Picker {
     "jcr:title"?: string;
 

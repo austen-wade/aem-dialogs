@@ -1,10 +1,11 @@
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { RenderCondition } from "../granite/RenderCondition";
+import { HeadingLevel } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/heading";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/heading";
 
 export interface Heading extends CommonAttributes, RenderCondition {
-    level?: number; // < 1, 2, 3, 4, 5, 6
+    level?: HeadingLevel;
 
     text?: string;
 }

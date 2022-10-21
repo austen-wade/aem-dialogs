@@ -1,6 +1,6 @@
 import { FormField } from "./Field";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/colorfield";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/colorfield";
 export interface FormColorField extends FormField {
     name?: string;
 

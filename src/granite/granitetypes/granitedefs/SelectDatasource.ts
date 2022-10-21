@@ -1,4 +1,4 @@
-const resourceType = " /libs/granite/ui/components/coral/foundation/authorizable/selectdatasource";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/authorizable/selectdatasource";
 // ?:datasource:
 
 export interface AuthorizableSelectDatasource {

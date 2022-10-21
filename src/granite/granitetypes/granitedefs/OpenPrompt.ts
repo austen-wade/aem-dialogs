@@ -1,4 +1,6 @@
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/responses/openprompt";
+import { CommonAttributes } from "../granite/CommonAttributes";
+
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/responses/openprompt";
 
 export interface FormResponsesOpenPrompt extends CommonAttributes {
     open?: string;

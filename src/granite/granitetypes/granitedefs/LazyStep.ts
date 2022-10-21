@@ -1,6 +1,6 @@
 import { GraniteNode } from "../../GraniteNode";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/wizard/lazystep";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/wizard/lazystep";
 
 export interface WizardLazyStep {
     "jcr:title": string;

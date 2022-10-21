@@ -1,4 +1,8 @@
-const resourceType = " /libs/granite/ui/components/coral/foundation/panel";
+import { GraniteNode } from "../../GraniteNode";
+import { CommonAttributes } from "../granite/CommonAttributes";
+import { RenderCondition } from "../granite/RenderCondition";
+
+export const resourceType = " /libs/granite/ui/components/coral/foundation/panel";
 
 export interface Panel extends CommonAttributes, RenderCondition {
     margin?: boolean;

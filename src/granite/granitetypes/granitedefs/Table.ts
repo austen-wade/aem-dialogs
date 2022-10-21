@@ -2,10 +2,11 @@ import { GraniteNode } from "../../GraniteNode";
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { RenderCondition } from "../granite/RenderCondition";
+import { Alignment, SelectionMode, SortMode, SortType } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/table";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/table";
 export interface Table extends CommonAttributes, RenderCondition, GraniteContainer {
-    selectionMode?: string; // < 'none', 'row'
+    selectionMode?: SelectionMode;
 
     selectionCount?: string; // ='multiple'
 
@@ -19,7 +20,7 @@ export interface Table extends CommonAttributes, RenderCondition, GraniteContain
 
     size?: number;
 
-    sortMode?: string; // < 'local', 'remote'
+    sortMode?: SortMode;
 
     orderable?: boolean;
 
@@ -41,6 +42,7 @@ export interface Table extends CommonAttributes, RenderCondition, GraniteContain
 
     emptyrow?: GraniteNode | GraniteNode[];
 }
+
 export interface TableColumn {
     name?: string;
 
@@ -50,7 +52,7 @@ export interface TableColumn {
 
     "jcr:title"?: string;
 
-    alignment?: string; // < 'left', 'right', 'center'
+    alignment?: Alignment;
 
     fixedWidth?: boolean;
 
@@ -60,5 +62,5 @@ export interface TableColumn {
 
     sortable?: boolean;
 
-    sortType?: string; // < 'alphanumeric', 'number', 'date', 'custom'
+    sortType?: SortType;
 }

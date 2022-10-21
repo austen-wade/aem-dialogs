@@ -2,8 +2,9 @@ import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { RenderCondition } from "../granite/RenderCondition";
 import { FormField } from "./Field";
+import { SelectVariant, StatusVariant } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/select";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/select";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 export interface FormSelect extends FormField, GraniteContainer {
     name?: string;
@@ -24,7 +25,7 @@ export interface FormSelect extends FormField, GraniteContainer {
 
     emptyOption?: boolean; // =false
 
-    variant?: string; // < 'default', 'quiet'
+    variant?: SelectVariant;
 
     deleteHint?: boolean; // =true
 
@@ -45,5 +46,5 @@ export interface FormSelectItem extends CommonAttributes, RenderCondition {
 
     statusText?: string;
 
-    statusVariant?: string; // < 'error', 'warning', 'success', 'help', 'info'
+    statusVariant?: StatusVariant;
 }

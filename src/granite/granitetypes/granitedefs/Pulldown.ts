@@ -1,8 +1,10 @@
+import { IconSize } from "../../../icons";
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { RenderCondition } from "../granite/RenderCondition";
+import { ActionBarSize, PulldownVariant } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/pulldown";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/pulldown";
 
 export interface Pulldown extends CommonAttributes, RenderCondition, GraniteContainer {
     text?: string;
@@ -11,13 +13,13 @@ export interface Pulldown extends CommonAttributes, RenderCondition, GraniteCont
 
     icon?: string;
 
-    iconSize?: string; // < 'XS', 'S', 'M', 'L'
+    iconSize?: IconSize;
 
-    size?: string; // < 'M', 'L'
+    size?: ActionBarSize;
 
     block?: boolean;
 
-    variant?: string; // < 'primary', 'warning', 'quiet', 'minimal', 'actionBar'
+    variant?: PulldownVariant;
 
     trackingFeature?: string;
 

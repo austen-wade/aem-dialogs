@@ -2,7 +2,7 @@ import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { FormField } from "./Field";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/radiogroup";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/radiogroup";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 export interface FormRadioGroup extends FormField, GraniteContainer {
     name?: string;

@@ -1,4 +1,6 @@
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/password";
+import { FormField } from "./Field";
+
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/password";
    // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
    }
       export interface FormPassword extends FormField {

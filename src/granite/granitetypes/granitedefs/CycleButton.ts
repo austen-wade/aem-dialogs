@@ -1,11 +1,12 @@
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { RenderCondition } from "../granite/RenderCondition";
+import { DisplayMode } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/cyclebutton";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/cyclebutton";
 
 export interface CycleButton extends CommonAttributes, RenderCondition, GraniteContainer {
-    displayMode?: string; // < 'icon', 'text', 'icontext'
+    displayMode?: DisplayMode;
 
     variant?: string; // < 'actionBar'
 }

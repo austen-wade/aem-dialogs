@@ -1,12 +1,13 @@
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { RenderCondition } from "../granite/RenderCondition";
+import { AlertSize, StatusVariant } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/alert";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/alert";
 
 export interface Alert extends CommonAttributes, RenderCondition {
-    variant?: string; // < 'error', 'warning', 'success', 'help', 'info'
+    variant?: StatusVariant;
 
-    size?: string; // < 'S', 'L'
+    size?: AlertSize;
 
     "jcr:title"?: string;
 

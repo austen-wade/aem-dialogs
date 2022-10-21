@@ -1,11 +1,17 @@
-const resourceType = " /libs/granite/ui/components/coral/foundation/collection/actionlink";
+import { IconSize } from "../../../icons";
+import { GraniteNode } from "../../GraniteNode";
+import { CommonAttributes } from "../granite/CommonAttributes";
+import { RenderCondition } from "../granite/RenderCondition";
+import { ActiveSelectionCount, RelScope } from "./LiteralTypes";
+
+export const resourceType = " /libs/granite/ui/components/coral/foundation/collection/actionlink";
 
 export interface CollectionActionLink extends CommonAttributes, RenderCondition {
     target?: string;
 
-    activeCount?: number; // < 0, ">0"
+    activeCount?: number; // = ">=0"
 
-    activeSelectionCount?: string; // < 'none', 'single', 'multiple'
+    activeSelectionCount?: ActiveSelectionCount;
 
     activeCondition?: string;
 
@@ -15,7 +21,7 @@ export interface CollectionActionLink extends CommonAttributes, RenderCondition 
 
     actionConfigName?: string;
 
-    relScope?: string; // < 'none', 'item', 'collection'
+    relScope?: RelScope;
 
     ignoreRel?: boolean;
 
@@ -31,7 +37,7 @@ export interface CollectionActionLink extends CommonAttributes, RenderCondition 
 
     rel?: string;
 
-    iconSize?: string; // < 'XS', 'S', 'M', 'L'
+    iconSize?: IconSize;
 
     trackingFeature?: string;
 

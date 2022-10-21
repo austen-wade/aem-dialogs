@@ -1,8 +1,9 @@
+import { IconSize } from "../../../icons";
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { FormField } from "./Field";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/buttongroup";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/buttongroup";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 
 type SelectionModes = "none" | "single" | "multiple";
@@ -32,5 +33,5 @@ export interface FormButtonGroupItem extends CommonAttributes {
 
     icon?: string;
 
-    iconSize?: string; // < 'XS', 'S', 'M', 'L'
+    iconSize?: IconSize;
 }

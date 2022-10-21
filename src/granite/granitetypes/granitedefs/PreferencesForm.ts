@@ -1,8 +1,9 @@
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { RenderCondition } from "../granite/RenderCondition";
+import { AlignmentStyle } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/authorizable/preferencesform";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/authorizable/preferencesform";
 
 export interface AuthorizablePreferencesForm extends CommonAttributes, RenderCondition, GraniteContainer {
     enctype?: string;
@@ -13,7 +14,7 @@ export interface AuthorizablePreferencesForm extends CommonAttributes, RenderCon
 
     novalidate?: boolean;
 
-    style?: string; // < 'vertical', 'aligned'
+    style?: AlignmentStyle;
 
     margin?: boolean;
 

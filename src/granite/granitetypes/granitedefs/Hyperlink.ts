@@ -1,7 +1,9 @@
+import { IconSize } from "../../../icons";
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { RenderCondition } from "../granite/RenderCondition";
+import { LinkCheckerSkip } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/hyperlink";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/hyperlink";
 
 export interface Hyperlink extends CommonAttributes, RenderCondition {
     href?: string;
@@ -18,9 +20,9 @@ export interface Hyperlink extends CommonAttributes, RenderCondition {
 
     hideText?: boolean;
 
-    "x-cq-linkchecker"?: string; // < 'skip', 'valid'
+    "x-cq-linkchecker"?: LinkCheckerSkip;
 
     icon?: string;
 
-    iconSize?: string; // < 'XS', 'S', 'M', 'L'
+    iconSize?: IconSize;
 }

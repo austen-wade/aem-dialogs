@@ -1,4 +1,4 @@
-const resourceType = " /libs/granite/ui/components/coral/foundation/meta";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/meta";
 export interface Meta {
     name?: string;
 

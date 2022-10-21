@@ -1,6 +1,7 @@
 import { FormField } from "./Field";
+import { ImpersonableUserFilter, Selector, ServiceUserFilter, ValueType } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/authorizable/autocomplete";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/authorizable/autocomplete";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 export interface AuthorizableAutocomplete extends FormField {
     name?: string;
@@ -19,11 +20,11 @@ export interface AuthorizableAutocomplete extends FormField {
 
     deleteHint?: boolean; // =true
 
-    valueType?: string; // < 'id', 'path', 'principalname'
+    valueType?: ValueType;
 
-    selector?: string; // < 'all', 'user', 'group'
+    selector?: Selector;
 
-    serviceUserFilter?: string; // < 'off', 'includeonly', 'exclude'
+    serviceUserFilter?: ServiceUserFilter;
 
-    impersonableUserFilter?: string; // < 'off', 'includeonly', 'exclude'
+    impersonableUserFilter?: ImpersonableUserFilter;
 }

@@ -2,11 +2,12 @@ import { GraniteNode } from "../../GraniteNode";
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { GraniteContainer } from "../granite/GraniteContainer";
 import { RenderCondition } from "../granite/RenderCondition";
+import { MasonryLayout } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/masonry";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/masonry";
 
 export interface Masonry extends CommonAttributes, RenderCondition, GraniteContainer {
-    layout?: string; // < 'fixed-spread', 'fixed-centered', 'variable', 'dashboard'
+    layout?: MasonryLayout;
 
     columnWidth?: number; // ='242'
 

@@ -1,4 +1,4 @@
-const resourceType = " /libs/granite/ui/components/coral/foundation/admin/contentchecker";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/admin/contentchecker";
 export interface AdminContentChecker {
     path?: string;
 

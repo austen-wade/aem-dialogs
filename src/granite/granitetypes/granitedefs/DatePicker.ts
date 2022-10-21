@@ -1,6 +1,7 @@
 import { FormField } from "./Field";
+import { DatePickerType } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/datepicker";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/datepicker";
 // :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 export interface FormDatePicker extends FormField {
     name?: string;
@@ -15,10 +16,9 @@ export interface FormDatePicker extends FormField {
 
     required?: boolean;
 
-    validation?: string;
-    multiple;
+    validation?: string[];
 
-    type?: string; // < 'date', 'datetime', 'time'
+    type?: DatePickerType;
 
     displayedFormat?: string;
 

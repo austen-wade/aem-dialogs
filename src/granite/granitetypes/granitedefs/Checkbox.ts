@@ -1,7 +1,8 @@
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { RenderCondition } from "../granite/RenderCondition";
+import { TooltipPosition } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/form/checkbox";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/form/checkbox";
 //   :supertype?: /libs/granite/ui/components/coral/foundation/form/field
 
 export interface FormCheckbox extends CommonAttributes, RenderCondition {
@@ -29,7 +30,7 @@ export interface FormCheckbox extends CommonAttributes, RenderCondition {
 
     fieldDescription?: string;
 
-    tooltipPosition?: string; // ='right' < 'left', 'right', 'top', 'bottom'
+    tooltipPosition?: TooltipPosition;
 
     renderReadOnly?: boolean;
 

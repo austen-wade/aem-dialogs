@@ -1,7 +1,9 @@
+import { IconSize } from "../../../icons";
 import { CommonAttributes } from "../granite/CommonAttributes";
 import { RenderCondition } from "../granite/RenderCondition";
+import { ActionBarSize, AnchorVariant, LinkCheckerSkip } from "./LiteralTypes";
 
-const resourceType = " /libs/granite/ui/components/coral/foundation/anchorbutton";
+export const resourceType = " /libs/granite/ui/components/coral/foundation/anchorbutton";
 
 export interface AnchorButton extends CommonAttributes, RenderCondition {
     href?: string;
@@ -14,17 +16,17 @@ export interface AnchorButton extends CommonAttributes, RenderCondition {
 
     hideText?: boolean;
 
-    "x-cq-linkchecker"?: string; // < 'skip', 'valid'
+    "x-cq-linkchecker"?: LinkCheckerSkip;
 
     icon?: string;
 
-    iconSize?: string; // < 'XS', 'S', 'M', 'L'
+    iconSize?: IconSize;
 
-    size?: string; // < 'M', 'L'
+    size?: ActionBarSize;
 
     block?: boolean;
 
-    variant?: string; // < 'primary', 'warning', 'quiet', 'minimal', 'actionBar'
+    variant?: AnchorVariant;
 
     command?: string;
 
