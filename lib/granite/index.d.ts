@@ -43,3 +43,4 @@ export * from "./RenderCondition";
 export * from "./renderconditions";
 export * from "./GraniteNode";
 export * from "./rteDefaults";
+export * from "./DialogRoot";

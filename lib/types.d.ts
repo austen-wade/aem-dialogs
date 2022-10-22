@@ -1,4 +1,5 @@
 export declare enum ResourceType {
+    CQ_DIALOG = "cq/gui/components/authoring/dialog",
     TEXTFIELD = "granite/ui/components/coral/foundation/form/textfield",
     CONTAINER = "granite/ui/components/coral/foundation/container",
     FIELD = "granite/ui/components/coral/foundation/form/field",
@@ -82,3 +83,5 @@ export declare enum RenderConditions {
     NOT = "/libs/granite/ui/components/foundation/renderconditions/not",
     OR = "/libs/granite/ui/components/coral/foundation/renderconditions/or"
 }
+export declare const Namespaces: Record<string, Prop>;
+export declare const NS: Record<string, Prop>;

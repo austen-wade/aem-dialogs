@@ -1,4 +1,7 @@
+import { prop } from "./utils";
+
 export enum ResourceType {
+    CQ_DIALOG = "cq/gui/components/authoring/dialog",
     TEXTFIELD = "granite/ui/components/coral/foundation/form/textfield",
     CONTAINER = "granite/ui/components/coral/foundation/container",
     FIELD = "granite/ui/components/coral/foundation/form/field",
@@ -85,3 +88,13 @@ export enum RenderConditions {
     NOT = "/libs/granite/ui/components/foundation/renderconditions/not",
     OR = "/libs/granite/ui/components/coral/foundation/renderconditions/or",
 }
+
+export const Namespaces: Record<string, Prop> = {
+    CQ: prop("xmlns:cq", "http://www.day.com/jcr/cq/1.0"),
+    GRANITE: prop("xmlns:granite", "http://www.adobe.com/jcr/granite/1.0"),
+    JCR: prop("xmlns:jcr", "http://www.jcp.org/jcr/1.0"),
+    NT: prop("xmlns:nt", "http://www.jcp.org/jcr/nt/1.0"),
+    SLING: prop("xmlns:sling", "http://sling.apache.org/jcr/sling/1.0"),
+};
+
+export const NS = Namespaces;
