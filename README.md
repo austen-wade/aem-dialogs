@@ -34,7 +34,7 @@ const root = new DialogRoot({ "jcr:title": "Button" }).child(new Container('cont
         text: "Open in new tab",
         uncheckedValue: false,
         value: true,
-        name: "./showDescription",
+        name: "./newTab",
         fieldDescription: "When checked, the button link will open in a new tab.",
     }),
     new Select('buttonColor', {
