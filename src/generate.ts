@@ -1,4 +1,4 @@
-import { AemNode } from "./AemNode";
+import { AemNode } from "./base/AemNode";
 import { formatXml } from "./utils";
 import { existsSync, mkdirSync, writeFileSync } from "fs";
 

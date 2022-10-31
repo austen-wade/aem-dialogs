@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<FileUpload jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/fileupload" class="class" name="./FileUpload"/>
+<FileUpload jcr:primaryType="nt:unstructured" sling:resourceType="/libs/granite/ui/components/coral/foundation/form/fileupload"/>

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TextArea jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea" value="value" name="./TextArea"/>
+<TextArea jcr:primaryType="nt:unstructured" sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea" value="value" resize="both"/>

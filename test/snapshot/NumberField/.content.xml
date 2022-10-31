@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<NumberField jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" value="value" disabled="{Boolean}false" step="2" name="./NumberField"/>
+<NumberField jcr:primaryType="nt:unstructured" sling:resourceType="/libs/granite/ui/components/coral/foundation/form/numberfield" value="value" disabled="{Boolean}false" step="2"/>

@@ -1,25 +1,22 @@
 import { readFileSync } from "fs";
 import {
-    Multifield,
-    Container,
-    TextField,
-    PathField,
     Checkbox,
+    Container,
     DatePicker,
-    Field,
     FileUpload,
     FixedColumns,
-    JcrRoot,
+    FormField,
+    Multifield,
     NumberField,
-    PathBrowser,
+    PathField,
     RadioGroup,
-    RichText,
     Select,
-    SelectOption,
-    Tab,
+    SelectItem,
     Textarea,
+    TextField,
 } from "../src";
 import { generate } from "../src/generate";
+import { RichText } from "../src/granite/RichText";
 
 const update = process.argv[2] === "-U";
 
@@ -43,11 +40,12 @@ const datePicker = new DatePicker("DatePicker", {
     disabled: true,
     fieldLabel: "field label",
     fieldDescription: "field description",
-    type: "type",
+    type: "time",
     typeHint: "type Hint",
+    valueFormat: "YYYY-MM-DD[T]HH:mm?:ss.SSSZ",
 });
 
-const field = new Field("Field", {
+const field = new FormField("FormField", {
     name: "testname",
     fieldLabel: "field label",
     fieldDescription: "field description",
@@ -57,16 +55,12 @@ const field = new Field("Field", {
     "granite:class": "granite class",
 });
 
-const fileUpload = new FileUpload("FileUpload", {
-    class: "class",
-});
+const fileUpload = new FileUpload("FileUpload", {});
 
-const fixedColumns = new FixedColumns("Fixed Columns", {
+const fixedColumns = new FixedColumns("FixedColumns", {
     margin: true,
     maximized: false,
 });
-
-const jcrRoot = new JcrRoot();
 
 const multifield = new Multifield("Multifield", {
     composite: false,
@@ -77,11 +71,6 @@ const numberField = new NumberField("NumberField", {
     value: "value",
     disabled: false,
     step: 2,
-});
-
-const pathBrowser = new PathBrowser("PathBrowser", {
-    rootPath: "rootPath",
-    required: true,
 });
 
 const pathField = new PathField("PathField", {
@@ -97,15 +86,14 @@ const richText = new RichText("RichText");
 
 const select = new Select("Select");
 
-const selectOption = new SelectOption("SelectOption", {
+const selectOption = new SelectItem("SelectItem", {
     text: "text",
     value: "value",
 });
 
-const tab = new Tab("Tab");
-
 const textArea = new Textarea("TextArea", {
     value: "value",
+    resize: "both",
 });
 
 const textField = new TextField("TextField", {
@@ -120,16 +108,13 @@ const nodeObjects = [
     field,
     fileUpload,
     fixedColumns,
-    jcrRoot,
     multifield,
     numberField,
-    pathBrowser,
     pathField,
     radioGroup,
     richText,
     select,
     selectOption,
-    tab,
     textArea,
     textField,
 ];

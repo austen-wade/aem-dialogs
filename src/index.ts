@@ -1,5 +1,5 @@
-export * from "./fields/index";
-export * from "./AemNode";
+export * from "./granite";
+export * from "./base/AemNode";
 export * from "./generate";
 export * from "./icons";
 export * from "./types";
