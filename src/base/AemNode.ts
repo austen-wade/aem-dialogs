@@ -13,7 +13,9 @@ export class AemNode {
 
     constructor(tag: string, resourceType?: string, props?: Prop[]) {
         this.props = props || [];
-        this.setProp("jcr:primaryType", "nt:unstructured");
+        if (!props?.find(prop => prop.field === "jcr:primaryType")) {
+            this.setProp("jcr:primaryType", "nt:unstructured");
+        }
         this.setProp("sling:resourceType", resourceType);
         this.tag = tag;
     }
