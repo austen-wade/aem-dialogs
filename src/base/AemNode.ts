@@ -54,6 +54,14 @@ export class AemNode {
             } else if (Array.isArray(value)) {
                 value = value.join(", ");
             }
+            
+            if (typeof value === "string") {
+                value = value.replace(/&/g, "&amp;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&apos;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;");
+            }
 
             this.removeProp(field);
             this.props.push({ field, value });

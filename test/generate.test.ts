@@ -75,7 +75,7 @@ const numberField = new NumberField("NumberField", {
 
 const pathField = new PathField("PathField", {
     rootPath: "rootPath",
-    emptyText: "empty text",
+    emptyText: "empty &quot;text&quot;",
 });
 
 const radioGroup = new RadioGroup("RadioGroup", {
@@ -97,7 +97,7 @@ const textArea = new Textarea("TextArea", {
 });
 
 const textField = new TextField("TextField", {
-    emptyText: "empty text",
+    emptyText: "<<>>&&''\"\"",
     required: false,
 });
 
