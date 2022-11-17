@@ -1,3 +1,4 @@
+import { AEM_BOOL } from "./constants";
 import { Prop } from "./types";
 
 export function formatXml(xml: string) {
@@ -42,10 +43,10 @@ export function getName(name: string) {
 
 export function aembool(b: boolean): string {
     if (b) {
-        return "{Boolean}true";
+        return AEM_BOOL.TRUE;
     }
 
-    return "{Boolean}false";
+    return AEM_BOOL.FALSE;
 }
 
 export function prop(field: string, value: string): Prop {
