@@ -56,7 +56,7 @@ export class AemNode {
             }
             
             if (typeof value === "string") {
-                value = value.replace(/&[^(?:quot|apos|lt|gt);]/g, "&amp;")
+                value = value.replace(/&(?![^ ]*[quot|apos|lt|gt|amp}];)/g, "&amp;")
                     .replace(/"/g, "&quot;")
                     .replace(/'/g, "&apos;")
                     .replace(/</g, "&lt;")
