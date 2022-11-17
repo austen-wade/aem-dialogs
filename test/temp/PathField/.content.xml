@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PathField jcr:primaryType="nt:unstructured" sling:resourceType="/libs/granite/ui/components/coral/foundation/form/pathfield" rootPath="rootPath" emptyText="empty text"/>
+<PathField jcr:primaryType="nt:unstructured" sling:resourceType="/libs/granite/ui/components/coral/foundation/form/pathfield" rootPath="rootPath" emptyText="empty &amp;&amp; &lt;&lt;&quot;text&quot;&gt;&gt; &quot; &apos;"/>

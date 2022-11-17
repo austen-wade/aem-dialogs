@@ -13,7 +13,9 @@ export class AemNode {
 
     constructor(tag: string, resourceType?: string, props?: Prop[]) {
         this.props = props || [];
-        this.setProp("jcr:primaryType", "nt:unstructured");
+        if (!props?.find(prop => prop.field === "jcr:primaryType")) {
+            this.setProp("jcr:primaryType", "nt:unstructured");
+        }
         this.setProp("sling:resourceType", resourceType);
         this.tag = tag;
     }
@@ -51,6 +53,14 @@ export class AemNode {
                 value = getName(value);
             } else if (Array.isArray(value)) {
                 value = value.join(", ");
+            }
+            
+            if (typeof value === "string") {
+                value = value.replace(/&(?![^ ]*[quot|apos|lt|gt|amp}];)/g, "&amp;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&apos;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;");
             }
 
             this.removeProp(field);
