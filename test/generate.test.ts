@@ -122,6 +122,7 @@ const nodeObjects = [
 describe("generation module", () => {
     for (const nodeObject of nodeObjects) {
         test(`generating ${nodeObject.tag} works`, () => {
+            generate(`./test/temp/${nodeObject.tag}`, nodeObject);
             const file = readFileSync(`./test/temp/${nodeObject.tag}/.content.xml`)
             expect(file).toMatchSnapshot()
         });
