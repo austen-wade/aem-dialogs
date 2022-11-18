@@ -122,14 +122,8 @@ const nodeObjects = [
 describe("generation module", () => {
     for (const nodeObject of nodeObjects) {
         test(`generating ${nodeObject.tag} works`, () => {
-            if (update) {
-                generate(`./test/snapshot/${nodeObject.tag}`, nodeObject);
-            } else {
-                generate(`./test/temp/${nodeObject.tag}`, nodeObject);
-                const snapshot = readFileSync(`./test/snapshot/${nodeObject.tag}/.content.xml`);
-                const temp = readFileSync(`./test/temp/${nodeObject.tag}/.content.xml`);
-                expect(temp).toStrictEqual(snapshot);
-            }
+            const file = readFileSync(`./test/temp/${nodeObject.tag}/.content.xml`)
+            expect(file).toMatchSnapshot()
         });
     }
 });

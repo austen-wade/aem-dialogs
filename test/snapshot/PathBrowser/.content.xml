@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PathBrowser jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser" rootPath="rootPath" required="{Boolean}true" name="./PathBrowser"/>
