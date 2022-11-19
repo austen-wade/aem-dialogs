@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<FormField jcr:primaryType="nt:unstructured" name="./testname" fieldLabel="field label" fieldDescription="field description" renderHidden="{Boolean}false" wrapperClass="wrapper class" tooltipPosition="left" granite:class="granite class"/>

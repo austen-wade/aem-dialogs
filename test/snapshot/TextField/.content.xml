@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TextField jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" emptyText="&lt;&lt;&gt;&gt;&amp;&amp;&apos;&apos;&quot;&quot;" required="{Boolean}false"/>

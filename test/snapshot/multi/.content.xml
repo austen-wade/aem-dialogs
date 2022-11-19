@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Multifield jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" name="./states" fieldDescription="Click '+' to add a new state." composite="{Boolean}true">
-  <Container jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
-    <items jcr:primaryType="nt:unstructured">
-      <TextField jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" name="./name" fieldLabel="Name" fieldDescription="Enter a state name" emptyText="Name" required="{Boolean}true"/>
-      <PathField jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" name="./flag" fieldLabel="Flag" fieldDescription="Select the state flag image" forceSelection="{Boolean}true" rootPath="/content/dam"/>
-    </items>
-  </Container>
-</Multifield>

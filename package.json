@@ -10,8 +10,7 @@
         "ts-types": "tsc -p tsconfig-build.json",
         "clean": "rimraf lib",
         "build": "pnpm run clean && node esbuilder.mjs && pnpm run ts-types",
-        "test": "jest",
-        "test:update": "jest -U"
+        "test": "jest"
     },
     "files": [
         "lib",
